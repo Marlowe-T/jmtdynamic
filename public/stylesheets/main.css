@@ -1,0 +1,139 @@
+html {
+    display: flex;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: dodger;
+}
+
+@font-face {
+    font-family: dodger;
+    src: url(/fonts/dodger3.ttf);
+}
+
+@font-face {
+    font-family: dodger title;
+    src: url(/fonts/dodger3title.ttf);
+}
+
+@font-face {
+    font-family: dodger italic;
+    src: url(/fonts/dodger3ital.ttf);
+}
+
+@font-face {
+    font-family: dodger laser;
+    src: url(/fonts/dodger3laser.ttf);
+}
+
+.dodgerFont {
+    font-family: dodger !important;
+}
+
+.dodgerItalicFont {
+    font-family: dodger italic !important;
+}
+
+.dodgerTitleFont {
+    font-family: dodger title !important;
+}
+
+.dodgerLaserFont {
+    font-family: dodger laser !important;
+}
+
+.mainContainer{
+    width: 80% !important;
+}
+
+/*Navbar Styles*/
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+}
+
+#navLogo {
+    padding: .25em;
+    font-size: 30px;
+}
+
+/*Banner Styles*/
+
+#banner {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.headerStyling {
+    margin-top: 1em !important;
+    font-size: 40px !important;
+}
+
+.subHeaderStyling {
+    margin-top: 2em !important;
+    font-size: 18px !important;
+}
+
+.dividerStyling {
+    margin: 2em 0em 6em 0em !important;
+}
+
+.sloganStyling {
+    margin: 0em 0em 1em 0em !important;
+    font-size: 16px !important;
+}
+
+.createrStyling {
+    margin: 0em !important;
+    text-align: end !important;
+}
+
+.medium.textstyles {
+    margin-top: 5em !important;
+}
+
+/*Deck Styles*/
+
+#deck {
+    margin: 0em -1em 0em -1em;
+    width: 100% !important;
+    justify-content: space-around;
+}
+
+.dividerMargin {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.cardPadding {
+    padding: 0px 0px 50px 0px !important;
+}
+
+.cardOne {
+    margin-right: 1em;
+}
+
+.cardTwo {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.cardThree {
+    margin-left: 1em;
+}
+
+.cardTextStyles {
+    padding: 2em;
+    font-size: 18px;
+}
+
+.endDivider {
+    vertical-align: bottom;
+}

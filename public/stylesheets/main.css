@@ -49,23 +49,14 @@ body {
 }
 
 /*Navbar Styles*/
-
-#navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: white;
-}
-
-#navLogo {
-    padding: .25em;
-    font-size: 30px;
+#ClearNav {
+    opacity: 0;
 }
 
 /*Banner Styles*/
 
 #banner {
-    width: 100%;
+    width: 80%;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -102,31 +93,12 @@ body {
 /*Deck Styles*/
 
 #deck {
-    margin: 0em -1em 0em -1em;
-    width: 100% !important;
-    justify-content: space-around;
+    width: 80% !important;
 }
 
-.dividerMargin {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.cardPadding {
-    padding: 0px 0px 50px 0px !important;
-}
-
-.cardOne {
-    margin-right: 1em;
-}
-
-.cardTwo {
-    margin-right: 1em;
-    margin-left: 1em;
-}
-
-.cardThree {
-    margin-left: 1em;
+#deckContact {
+    max-width: 800px;
+    margin-top: 50px;
 }
 
 .cardTextStyles {

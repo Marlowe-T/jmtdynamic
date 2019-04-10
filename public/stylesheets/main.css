@@ -1,11 +1,26 @@
 html {
     display: flex;
+    height: 100%;
 }
 
 body {
+    color: white;
     height: 100%;
     width: 100%;
+    background-image: url("/images/backgroundImage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     font-family: dodger;
+}
+
+.contentHeight {
+    height: 100%;
+}
+
+#formPlacement {
+    position: 50% 50%;
 }
 
 @font-face {
@@ -49,8 +64,8 @@ body {
 }
 
 /*Navbar Styles*/
-#ClearNav {
-    opacity: 0;
+#navStyles {
+    
 }
 
 /*Banner Styles*/
@@ -94,6 +109,10 @@ body {
 
 #deck {
     width: 80% !important;
+}
+
+.backgroundColor {
+    background: rgba(30, 30, 30, 0.808)
 }
 
 #deckContact {

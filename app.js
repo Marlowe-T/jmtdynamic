@@ -22,6 +22,14 @@ app.get("/contact", (req,res) => {
   res.render("contact/contact");
 });
 
+app.get("/login", (req, res) => {
+  res.render("login/login");
+});
+
+app.get("/register", (req, res) => {
+  res.render("login/register");
+});
+
 var server = app.listen(3000, function (){
   console.log("---Server Started---")
 });

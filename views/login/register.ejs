@@ -1,0 +1,27 @@
+<% include ../partials/header.ejs %>
+
+<div class="container-fluid contentHeight">
+    <div class="container d-flex justify-content-center">
+            <form class="backgroundColor">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Joe Smith">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" class="form-control" id="company" placeholder="something co.">
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email Address</label>
+                    <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary float-right">Register</button>
+            </form>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

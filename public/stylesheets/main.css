@@ -7,12 +7,12 @@ body {
     color: white;
     height: 100%;
     width: 100%;
-    background-image: url("/images/backgroundImage.jpg");
+    font-family: 'Play', sans-serif;
+    background-image: url("/images/bg-stars-2560.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    font-family: dodger;
 }
 
 .contentHeight {
@@ -38,11 +38,6 @@ body {
     src: url(/fonts/dodger3ital.ttf);
 }
 
-@font-face {
-    font-family: dodger laser;
-    src: url(/fonts/dodger3laser.ttf);
-}
-
 .dodgerFont {
     font-family: dodger !important;
 }
@@ -55,17 +50,13 @@ body {
     font-family: dodger title !important;
 }
 
-.dodgerLaserFont {
-    font-family: dodger laser !important;
-}
-
 .mainContainer{
     width: 80% !important;
 }
 
 /*Navbar Styles*/
 #navStyles {
-    
+    font-family: dodger;
 }
 
 /*Banner Styles*/
@@ -78,21 +69,24 @@ body {
 }
 
 .headerStyling {
-    margin-top: 1em !important;
     font-size: 40px !important;
 }
 
 .subHeaderStyling {
-    margin-top: 2em !important;
+    margin-top: 1em !important;
     font-size: 18px !important;
 }
 
-.dividerStyling {
-    margin: 2em 0em 6em 0em !important;
+.dividerSpacing {
+    margin: 3em 0em 3em 0em !important;
+}
+
+.dividerColor {
+    border-color: #595959;
 }
 
 .sloganStyling {
-    margin: 0em 0em 1em 0em !important;
+    margin: 4em 0em 1em 0em !important;
     font-size: 16px !important;
 }
 

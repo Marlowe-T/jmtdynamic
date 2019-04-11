@@ -19,8 +19,56 @@ body {
     height: 100%;
 }
 
-#formPlacement {
-    position: 50% 50%;
+#navStyles {
+    font-family: dodger;
+}
+
+#banner {
+    width: 80%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.headerStyling {
+    font-size: 40px !important;
+}
+
+.subHeaderStyling {
+    margin-top: 1em !important;
+    font-size: 18px !important;
+}
+
+div hr {
+    margin: 3em 0em 3em 0em !important;
+    border-color: #595959;
+}
+
+.sloganStyling {
+    margin: 4em 0em 1em 0em !important;
+    font-size: 16px !important;
+}
+
+#deck {
+    width: 80% !important;
+}
+
+.backgroundColor {
+    background: rgba(30, 30, 30, 0.808)
+}
+
+#contactDeck {
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+.cardTextStyles {
+    padding: 2em;
+    font-size: 18px;
+}
+
+.cardSizer {
+    width: 32%;
 }
 
 @font-face {
@@ -48,77 +96,4 @@ body {
 
 .dodgerTitleFont {
     font-family: dodger title !important;
-}
-
-.mainContainer{
-    width: 80% !important;
-}
-
-/*Navbar Styles*/
-#navStyles {
-    font-family: dodger;
-}
-
-/*Banner Styles*/
-
-#banner {
-    width: 80%;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.headerStyling {
-    font-size: 40px !important;
-}
-
-.subHeaderStyling {
-    margin-top: 1em !important;
-    font-size: 18px !important;
-}
-
-.dividerSpacing {
-    margin: 3em 0em 3em 0em !important;
-}
-
-.dividerColor {
-    border-color: #595959;
-}
-
-.sloganStyling {
-    margin: 4em 0em 1em 0em !important;
-    font-size: 16px !important;
-}
-
-.createrStyling {
-    margin: 0em !important;
-    text-align: end !important;
-}
-
-.medium.textstyles {
-    margin-top: 5em !important;
-}
-
-/*Deck Styles*/
-
-#deck {
-    width: 80% !important;
-}
-
-.backgroundColor {
-    background: rgba(30, 30, 30, 0.808)
-}
-
-#deckContact {
-    max-width: 800px;
-    margin-top: 50px;
-}
-
-.cardTextStyles {
-    padding: 2em;
-    font-size: 18px;
-}
-
-.endDivider {
-    vertical-align: bottom;
 }

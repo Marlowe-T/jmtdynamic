@@ -10,8 +10,8 @@ router.get("/home", (req, res) => {
     res.render("./index/index");
 });
 
-router.get("/login", (req, res) => {
-    res.render("./index/login");
+router.get("./login", (req, res) => {
+    res.render("/index/login");
 });
 
 router.get("/register", (req, res) => {

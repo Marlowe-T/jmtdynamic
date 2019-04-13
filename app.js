@@ -13,8 +13,8 @@ var port = process.env.PORT || 8080
 //mongoose.connect("mongodb://localhost:27017/portsite", {useNewUrlParser: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(path.join(__dirname + "../public")));
-app.set("views", path.join(__dirname + "../views"));
+app.use(express.static(__dirname + "/public"));
+app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 
 

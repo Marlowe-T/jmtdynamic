@@ -131,12 +131,7 @@ div hr {
      position:relative;
 }
 
-#regDropBtn:hover .regDropMenu {
-    display: block;
-    z-index: 100;
-}
-
-.regDropMenu:hover {
+#regDropBtn:active .regDropMenu {
     display: block;
 }
 

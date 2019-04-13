@@ -15,6 +15,10 @@ body {
     background-size: cover;
 }
 
+form {
+    font-family: 'Play', sans-serif;
+}
+
 .contentHeight {
     height: 100%;
 }
@@ -71,14 +75,14 @@ div hr {
     width: 32%;
 }
 
-.loginDropdownMenu {
+.loginDropMenu {
     position: absolute;
-    top: 100%;
-    left: -330%;
-    z-index: 1000;
     display: none;
+    top: 100%;
+    left: -396%;
+    z-index: 1000;
     float: left;
-    min-width: 10rem;
+    min-width: 25rem;
     padding: .5rem 0;
     margin: .125rem 0 0;
     font-size: 1rem;
@@ -91,15 +95,23 @@ div hr {
     border-radius: .25rem;
 }
 
-.registerDropdownMenu {
+#loginDropBtn {
+    position: relative;
+}
+
+#loginDropBtn:hover.loginDropMenu{
+    display: block;
+}
+
+.regDropMenu {
     position: absolute;
-    top: 100%;
-    left: -310%;
-    z-index: 1000;
     display: none;
+    top: 100%;
+    left: -396%;
+    z-index: 1000;
     float: left;
-    min-width: 10rem;
-    padding: .5rem .5rem;
+    min-width: 25rem;
+    padding: .5rem 0;
     margin: .125rem 0 0;
     font-size: 1rem;
     color: #212529;
@@ -109,6 +121,10 @@ div hr {
     background-clip: padding-box;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: .25rem;
+}
+
+#regDropBtn {
+     position:relative;
 }
 
 @font-face {

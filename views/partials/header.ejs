@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans+Condensed:300|Play|Teko" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
     <title>JMT</title>
 
 </head>
@@ -19,52 +19,50 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul class="navbar-nav">
-                <li class="nav-item mx-3 rounded shadow backgroundColor active">
-                    <a class="nav-link" href="/projects">Projects<span class="sr-only">(current)</span></a>
+                <li class="nav-item mx-3 rounded shadow backgroundColor">
+                    <a class="nav-link" href="/projects">Projects</a>
                 </li>
                 <li class="nav-item mx-3 rounded shadow backgroundColor">
                   <a class="nav-link" href="/contact">Contact</a>
                 </li>
                 <li class="nav-item dropdown mx-3 rounded shadow backgroundColor">
-                  <a class="nav-link" href="/login" id="loginDropdown" role="button" data-toggle="dropdown">
+                  <a class="nav-link" id="loginDropBtn" href="#">
                     Login
                   </a>
-                  <div class="loginDropdownMenu" aria-labelledby="loginDropdown">
+                  <div class="loginDropMenu">
                     <form class="w-100 p-2">
                         <div class="form-group">
-                            <label for="emailAddress">Email Address</label>
-                            <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+                            <label >Email Address</label>
+                            <input type="email" class="form-control" placeholder="name@example.com">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <label >Password</label>
+                            <input type="password" class="form-control" placeholder="Password">
                         </div>
-                        <a class="btn btn-warning dropdown" href="/register" id="registerDropdown" role="button" data-toggle="dropdown">
-                          Register
-                        </a>
+                        <button class="btn btn-warning" id="regDropBtn" href="#">Register</button>
                         <button type="submit" class="btn btn-primary float-right">Login</button>
                     </form>
                   </div>
-                  <div class="registerDropdownMenu" aria-labelledby="registerDropdown">
-                    <form class="w-100">
-                      <div class="form-group">
-                          <label for="name">Name</label>
-                          <input type="text" class="form-control" id="name" placeholder="Joe Smith">
-                      </div>
-                      <div class="form-group">
-                          <label for="company">Company</label>
-                          <input type="text" class="form-control" id="company" placeholder="something co.">
-                      </div>
-                      <div class="form-group">
-                          <label for="emailAddress">Email Address</label>
-                          <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="name@example.com">
-                      </div>
-                      <div class="form-group">
-                          <label for="exampleInputPassword1">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                      </div>
-                      <button type="submit" class="btn btn-primary float-right">Register</button>
-                    </form>
+                  <div class="regDropMenu">
+                      <form class="w-100">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control"placeholder="Joe Smith">
+                        </div>
+                        <div class="form-group">
+                            <label>Company</label>
+                            <input type="text" class="form-control"placeholder="something co.">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary float-right">Register</button>
+                      </form>
                   </div>
                 </li>
               </ul>

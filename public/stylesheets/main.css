@@ -75,6 +75,7 @@ div hr {
     width: 32%;
 }
 
+<<<<<<< HEAD
 .loginDropMenu {
     position: absolute;
     display: none;
@@ -127,6 +128,8 @@ div hr {
      position:relative;
 }
 
+=======
+>>>>>>> parent of 97c6af0... add login/register dropdown html/css to index
 @font-face {
     font-family: dodger;
     src: url(/fonts/dodger3.ttf);

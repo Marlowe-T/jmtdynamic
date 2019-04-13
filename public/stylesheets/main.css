@@ -75,7 +75,6 @@ div hr {
     width: 32%;
 }
 
-<<<<<<< HEAD
 .loginDropMenu {
     position: absolute;
     display: none;
@@ -97,10 +96,14 @@ div hr {
 }
 
 #loginDropBtn {
-    position: relative;
+    display: block;
 }
 
-#loginDropBtn:hover.loginDropMenu{
+#loginDropBtn:hover .loginDropMenu {
+    display: block;
+}
+
+.loginDropMenu:hover {
     display: block;
 }
 
@@ -128,8 +131,15 @@ div hr {
      position:relative;
 }
 
-=======
->>>>>>> parent of 97c6af0... add login/register dropdown html/css to index
+#regDropBtn:hover .regDropMenu {
+    display: block;
+    z-index: 100;
+}
+
+.regDropMenu:hover {
+    display: block;
+}
+
 @font-face {
     font-family: dodger;
     src: url(/fonts/dodger3.ttf);

@@ -75,11 +75,15 @@ div hr {
     width: 32%;
 }
 
+.loginDropdown {
+    position: relative;
+}
+
 .loginDropMenu {
     position: absolute;
     display: none;
     top: 100%;
-    left: -396%;
+    left: -395%;
     z-index: 1000;
     float: left;
     min-width: 25rem;
@@ -95,16 +99,8 @@ div hr {
     border-radius: .25rem;
 }
 
-#loginDropBtn {
-    display: block;
-}
-
-#loginDropBtn:hover .loginDropMenu {
-    display: block;
-}
-
-.loginDropMenu:hover {
-    display: block;
+.regDropdown {
+    position: relative;
 }
 
 .regDropMenu {
@@ -125,14 +121,6 @@ div hr {
     background-clip: padding-box;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: .25rem;
-}
-
-#regDropBtn {
-     position:relative;
-}
-
-#regDropBtn:active .regDropMenu {
-    display: block;
 }
 
 @font-face {

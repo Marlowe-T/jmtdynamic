@@ -13,26 +13,34 @@ router.get("/home", (req, res) => {
 });
 
 router.post("/register", (req, res) => {
-    var newUser = new User({
-        name: req.body.name,
+    var newUser = new User(
+    {   name: req.body.name,
         company: req.body.company,
-        email: req.body.email});
+        username: req.body.username
+    });
     User.register(newUser, req.body.password, (err, user) => {
         if(err){
-            res.redirect("/");
+            req.flash("error", err.message);
+            res.redirect("back");
         }
         passport.authenticate("local")(req, res, () => {
-            res.redirect("/");
+            req.flash("success", "Hello, " + user.name + "! You are now logged in.")
+            res.redirect("back");
         });
     });
 });
 
 router.post("/login", passport.authenticate("local",
-    {
-        successRedirect: "/projects",
-        failureRedirect: "/contact"
+    {   successRedirect: "back",
+        failureRedirect: "back"
     }), (req, res) => {
         console.log(passport.authenticate());
 });
+
+router.get("/logout", (req, res) => {
+    req.logout();
+    req.flash("success", "You have been logged out.");
+    res.redirect("back");
+})
 
 module.exports = router;

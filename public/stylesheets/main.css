@@ -27,6 +27,10 @@ form {
     font-family: dodger;
 }
 
+.hoverStyle {
+    background-color: rgba(80,80,80,0.5);
+}
+
 #banner {
     width: 80%;
     text-align: center;

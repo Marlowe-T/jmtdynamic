@@ -107,7 +107,7 @@ div hr {
     position: absolute;
     display: none;
     top: 100%;
-    left: -396%;
+    left: -395%;
     z-index: 1000;
     float: left;
     min-width: 25rem;

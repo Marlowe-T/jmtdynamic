@@ -24,7 +24,7 @@ router.post("/register", (req, res) => {
             res.redirect("back");
         }
         passport.authenticate("local")(req, res, () => {
-            req.flash("success", "Hello, " + user.name + "! You are now logged in.")
+            req.flash("success", "Hello, " + user.name + "! You can now log in.")
             res.redirect("back");
         });
     });
@@ -32,7 +32,9 @@ router.post("/register", (req, res) => {
 
 router.post("/login", passport.authenticate("local",
     {   successRedirect: "back",
-        failureRedirect: "back"
+        successFlash: "Login Successful!",
+        failureRedirect: "back",
+        failureFlash: "Invalid Username or Password."
     }), (req, res) => {
         console.log(passport.authenticate());
 });

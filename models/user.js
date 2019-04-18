@@ -6,7 +6,8 @@ var UserSchema = new  mongoose.Schema({
     name: String,
     company: String,
     username: String,
-    password: String
+    password: String,
+    admin: Boolean
 });
 
 UserSchema.plugin(passportLocalMongoose);

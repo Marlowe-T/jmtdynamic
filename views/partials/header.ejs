@@ -76,7 +76,7 @@
                 <% } else { %>
                 <li class="nav-item mx-3 rounded">
                   <a class="nav-link" href="/logout" id="logoutBtn" role="button">
-                    Logout
+                    <%= currentUser.name %>, Logout
                   </a>
                 </li>
                 <% } %>
@@ -87,14 +87,14 @@
 
     <% if(error && error.length > 0){ %>
         <div class="container">
-            <div class="alert alert-danger text-center" role="alert">
+            <div class="alert flash-danger text-center" role="alert">
                 <%= error %>
             </div>
         </div>
     <% } %>
     <% if(success && success.length > 0){ %>
         <div class="container">
-            <div class="alert alert-success text-center" role="alert">
+            <div class="alert flash-success text-center" role="alert">
                 <%= success %>
             </div>
         </div>

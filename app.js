@@ -14,7 +14,7 @@ const indexRoutes   = require("./routes/index"),
       contactRoutes = require("./routes/contact"),
       projectRoutes = require("./routes/project");
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 8080;
 
 mongoose.connect("mongodb+srv://dbadmin:N0v3mb3r@cluster0-aqceu.mongodb.net/test?retryWrites=true", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));

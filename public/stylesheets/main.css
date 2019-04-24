@@ -143,6 +143,30 @@ div hr {
     border-radius: .25rem;
 }
 
+.userDropdown {
+    position: relative;
+}
+
+.userDropMenu {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: -7%;
+    z-index: 1000;
+    float: left;
+    min-width: 25rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
 @media only screen and (min-width: 992px) {
     .loginDropdown {
         position: relative;
@@ -152,7 +176,7 @@ div hr {
         position: absolute;
         display: none;
         top: 100%;
-        left: -395%;
+        left: -610%;
         z-index: 1000;
         float: left;
         min-width: 25rem;
@@ -176,7 +200,7 @@ div hr {
         position: absolute;
         display: none;
         top: 100%;
-        left: -395%;
+        left: -610%;
         z-index: 1000;
         float: left;
         min-width: 25rem;
@@ -185,6 +209,30 @@ div hr {
         font-size: 1rem;
         color: #212529;
         text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: .25rem;
+    }
+
+    .userDropdown {
+        position: relative;
+    }
+    
+    .userDropMenu {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: -115%;
+        z-index: 1000;
+        float: left;
+        min-width: 12rem;
+        padding: .5rem 0;
+        margin: .125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: center;
         list-style: none;
         background-color: #fff;
         background-clip: padding-box;

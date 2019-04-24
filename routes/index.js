@@ -24,7 +24,7 @@ router.post("/register", (req, res) => {
             res.redirect("back");
         }
         passport.authenticate("local")(req, res, () => {
-            req.flash("success", "Hello, " + user.name + "! You can now log in.")
+            req.flash("success", "Hello, " + user.name + "! You're now logged in!")
             res.redirect("back");
         });
     });
@@ -32,7 +32,7 @@ router.post("/register", (req, res) => {
 
 router.post("/login", passport.authenticate("local",
     {   successRedirect: "back",
-        successFlash: "Login Successful!",
+        successFlash: "Hello, welcome back!",
         failureRedirect: "back",
         failureFlash: "Invalid Username or Password."
     }), (req, res) => {
@@ -41,7 +41,7 @@ router.post("/login", passport.authenticate("local",
 
 router.get("/logout", (req, res) => {
     req.logout();
-    req.flash("success", "You have been logged out.");
+    req.flash("success", "You've been logged out");
     res.redirect("back");
 })
 

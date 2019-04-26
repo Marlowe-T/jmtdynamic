@@ -14,7 +14,8 @@ router.get("/home", (req, res) => {
 
 router.post("/register", (req, res) => {
     var newUser = new User(
-    {   name: req.body.name,
+    {   firstName: req.body.firstName,
+        lastName: req.body.lastName,
         company: req.body.company,
         username: req.body.username
     });
@@ -24,7 +25,7 @@ router.post("/register", (req, res) => {
             res.redirect("back");
         }
         passport.authenticate("local")(req, res, () => {
-            req.flash("success", "Hello, " + user.name + "! You're now logged in!")
+            req.flash("success", "Hello, " + user.firstName + "! Welcome to JMT Developing!")
             res.redirect("back");
         });
     });

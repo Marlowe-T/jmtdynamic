@@ -23,6 +23,11 @@ form {
     min-height: 100%;
 }
 
+nav li {
+    border: 1px solid #525252;
+    border-radius: .25rem;
+}
+
 #navStyles {
     font-family: 'Play', sans-serif;
 }
@@ -73,6 +78,10 @@ div hr {
     background: rgba(30, 30, 30, 0.808)
 }
 
+div .card {
+    background: rgba(30, 30, 30, 0.808)
+}
+
 #contactDeck {
     max-width: 800px;
     margin-top: 50px;
@@ -87,12 +96,20 @@ div hr {
     width: 32%;
 }
 
-.mw-25 {
-    max-width: 25%;
+.txt-size-sm {
+    font-size: 12px;
+}
+
+.mw-20 {
+    max-width: 20%;
 }
 
 .p-05 {
     padding: .5rem;
+}
+
+.p-y-6 {
+    padding: 6em 0em 6em 0em;
 }
 
 .loginDropdown {

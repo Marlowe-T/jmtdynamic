@@ -12,11 +12,12 @@ const User = require("./models/user");
 
 const indexRoutes   = require("./routes/index"),
       contactRoutes = require("./routes/contact"),
-      projectRoutes = require("./routes/project");
+      projectRoutes = require("./routes/project"),
+      profileRoutes = require("./routes/userProfile");
 
 const port = process.env.PORT || 8080;
 
-mongoose.connect("mongodb+srv://dbadmin:N0v3mb3r@cluster0-aqceu.mongodb.net/test?retryWrites=true", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://dbadmin:N0v3mb3r@cluster0-aqceu.mongodb.net/JMTDevSite?retryWrites=true", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
@@ -47,6 +48,7 @@ app.use(function(req, res, next){
 app.use("/", indexRoutes);
 app.use("/contact", contactRoutes);
 app.use("/projects", projectRoutes);
+app.use("/profile/:id", profileRoutes)
 
 
 app.listen(port, function (){

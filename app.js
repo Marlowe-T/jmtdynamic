@@ -8,7 +8,8 @@ const methodOverride = require("method-override"),
       express        = require("express"),
       app            = express();
 
-const User = require("./models/user");
+const User = require("./models/user"),
+      userApp = require("./models/userApp");
 
 const indexRoutes   = require("./routes/index"),
       contactRoutes = require("./routes/contact"),

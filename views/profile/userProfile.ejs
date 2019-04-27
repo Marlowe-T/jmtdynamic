@@ -2,36 +2,58 @@
 
 <div class="container mx-5 mt-4">
     <div class="row">
-            <div class="card col-4 align-self-start mw-20 px-0 mx-2">
-              <img src="/images/blankProfile.png" class="card-img-top rounded" alt="...">
-              <div class="card-body p-2">
-                <p class="card-text text-center mb-0"><strong><%= currentUser.firstName %> <%= currentUser.lastName %></strong></p>
-                <p class="card-text text-center mb-0 txt-size-sm font-weight-bold"><em>with</em></p>
-                <p class="card-text text-center"><%= currentUser.company %></p>
-              </div>
-            </div>
-            <div class="card col-9 mx-2">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-4">
-                            <h5>My Apps</h5>
+        <div class="card col-4 mw-20 px-0 mx-2">
+          <img src="/images/blankProfile.png" class="card-img-top rounded" alt="...">
+          <div class="card-body p-2">
+            <p class="card-text text-center mb-0"><strong><%= currentUser.firstName %> <%= currentUser.lastName %></strong></p>
+            <p class="card-text text-center mb-0 txt-size-sm font-weight-bold"><em>with</em></p>
+            <p class="card-text text-center"><%= currentUser.company %></p>
+          </div>
+        </div>
+        <div class="card col-9 mx-2">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">
+                        <h5>My Apps</h5>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-3 text-center">
+                        <div class="card rounded border">
+                            <h6 class="card-title my-2">App Name</h6>
+                            <img src="/images/blankProfile.png" class="card-img">
                         </div>
                     </div>
-                    <div class="row justify-content-center mt-4">
-                        <div class="col-3 text-center">
-                            <div class="card rounded border">
-                                <a class="p-y-6" href="#">+ Add App</a>
-                            </div>
+                    <div class="col-3">
+                        <div class="card rounded border h-100">
+                            <a class="btn btn-primary h-100" href="#">+ New App</a>
                         </div>
-                        <div class="col-3 text-center">
-                            <div class="card rounded border">
-                                <h5 class="card-title my-2">App Name</h5>
-                                <img src="/images/blankProfile.png" class="card-img">
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="card col-9 mx-2 justify-content-center d-none">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">
+                        <h5>New App</h5>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-5 container align-middle">
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input class="form-control" type="text" name=appName placeholder="App">
+                                <label>Address</label>
+                                <input class="form-control" type="text" name=appAddress placeholder="http://www.app.com">
                             </div>
-                        </div>
+                            <button class="btn btn-primary float-right" type="submit">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 </div>
 

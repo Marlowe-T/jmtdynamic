@@ -6,4 +6,4 @@ var UserAppSchema = new  mongoose.Schema({
     address: String
 });
 
-module.exports = mongoose.model("UserApp", UserSchema);
+module.exports = mongoose.model("UserApp", UserAppSchema);

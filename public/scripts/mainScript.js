@@ -19,8 +19,18 @@ $(function() {
         });
     });
 
+    $("div.appFormBtn > a").on("click", () =>{
+        $(".appList").hide();
+        $(".appForm").show();
+    });
+
     $("li.userDropdown > a").on("click", () =>{
         $(".userDropMenu").toggle("display");
     });
+
+    $("div.appFormBtn > a").on("click", () =>{
+
+        $(".appform").toggle("display");
+    })
 
 });

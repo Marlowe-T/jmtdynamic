@@ -1,7 +1,7 @@
 const express = require("express"),
       router  = express.Router(),
-      User = require("../models/user.js"),
-      userApp = require("./models/userApp");
+      User = require("../models/user"),
+      userApp = require("../models/userApp");
 
 router.get("/", (req, res) => {
     res.render("./profile/userProfile");

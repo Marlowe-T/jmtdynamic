@@ -14,10 +14,11 @@ router.get("/home", (req, res) => {
 
 router.post("/register", (req, res) => {
     var newUser = new User(
-    {   firstName: req.body.firstName,
+    {   
+        username: req.body.username,
+        firstName: req.body.firstName,
         lastName: req.body.lastName,
-        company: req.body.company,
-        username: req.body.username
+        company: req.body.company
     });
     User.register(newUser, req.body.password, (err, user) => {
         if(err){
@@ -43,7 +44,7 @@ router.post("/login", passport.authenticate("local",
 router.get("/logout", (req, res) => {
     req.logout();
     req.flash("success", "You've been logged out");
-    res.redirect("back");
+    res.redirect("/home");
 })
 
 module.exports = router;

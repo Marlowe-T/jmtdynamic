@@ -23,6 +23,10 @@ form {
     min-height: 100%;
 }
 
+.borderOne {
+    border: 1px solid #7e7e7e!important;
+}
+
 nav li {
     border: 1px solid #525252;
     border-radius: .25rem;

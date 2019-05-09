@@ -5,48 +5,57 @@
         <div class="card col-4 mw-20 px-0 mx-2">
           <img src="/images/blankProfile.png" class="card-img-top rounded" alt="...">
           <div class="card-body p-2">
-            <p class="card-text text-center mb-0"><strong><%= currentUser.firstName %> <%= currentUser.lastName %></strong></p>
+            <p class="card-text text-center mb-0"><%= currentUser.firstName %> <%= currentUser.lastName %></p>
             <p class="card-text text-center mb-0 txt-size-sm font-weight-bold"><em>with</em></p>
             <p class="card-text text-center"><%= currentUser.company %></p>
           </div>
         </div>
         <div class="card col-9 mx-2 appList">
             <div class="card-body">
-                <div class="row">
-                    <div class="col-4">
+                <div class="row d-inline">
+                    <div class="col-4 d-inline-block">
                         <h5>My Apps</h5>
                     </div>
-                </div>
-                <div class="row justify-content-center mt-4">
-                    <div class="col-3 text-center">
-                        <div class="card rounded border">
-                            <h6 class="card-title my-2">App Name</h6>
-                            <img src="/images/blankProfile.png" class="card-img">
-                        </div>
+                    <div class="card rounded d-inline appFormBtn">
+                        <a class="btn btn-primary border float-right" href="#">+ New App</a>
                     </div>
-                    <div class="col-3">
-                        <div class="card rounded border h-100 appFormBtn">
-                            <a class="btn btn-primary h-100" href="#">+ New App</a>
-                        </div>
-                    </div> 
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <% userApp.forEach((userApp) => { %>
+                        <% if(currentUser && userApp.author.id.equals(currentUser.id)){ %>
+                            <div class="col-3 text-center mb-2">
+                                <a href="<%= userApp.address %>">
+                                    <div class="card rounded borderOne">
+                                        <h6 class="card-title my-2"><%= userApp.name %></h6>
+                                        <img src="<%= userApp.image %>" class="card-img">
+                                    </div>
+                                </a>
+                            </div>
+                        <% } %>
+                    <% }); %>
                 </div>
             </div>
         </div>
         <div class="card col-9 mx-2 justify-content-center appForm">
             <div class="card-body">
-                <div class="row">
-                    <div class="col-4">
-                        <h5>New App</h5>
+                    <div class="row d-inline">
+                        <div class="col-4 d-inline-block">
+                            <h5>New Apps</h5>
+                        </div>
+                        <div class="card rounded d-inline appFormCloseBtn">
+                            <a class="btn btn-warning border float-right" href="#">X</a>
+                        </div>
                     </div>
-                </div>
                 <div class="row justify-content-center">
                     <div class="col-5 container align-middle">
-                        <form action="#" method="POST">
+                        <form action="/profile/<%= currentUser._id %>/newApp" method="POST">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input class="form-control" type="text" name=appName placeholder="App">
+                                <input class="form-control" type="text" name=name placeholder="App">
+                                <label>Image</label>
+                                <input class="form-control" type="text" name=image placeholder="Image">
                                 <label>Address</label>
-                                <input class="form-control" type="text" name=appAddress placeholder="http://www.app.com">
+                                <input class="form-control" type="text" name=address placeholder="http://www.app.com">
                             </div>
                             <button class="btn btn-primary float-right" type="submit">Submit</button>
                         </form>

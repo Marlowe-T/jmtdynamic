@@ -6,7 +6,7 @@ router.get("/", (req,res) => {
   res.render("./projects/projects");
 });
 
-router.post("/", (req,res) => {
+router.post("/newApp", (req,res) => {
   var name = req.body.name,
       image = req.body.image,
       desc = req.body.description,

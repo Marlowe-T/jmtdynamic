@@ -12,21 +12,21 @@
         </div>
         <div class="card col-9 mx-2 appList">
             <div class="card-body">
-                <div class="row d-inline">
+                <div class="row d-inline appFormBtn">
                     <div class="col-4 d-inline-block">
                         <h5>My Apps</h5>
                     </div>
-                    <div class="card rounded d-inline appFormBtn">
-                        <a class="btn btn-primary border float-right" href="#">+ New App</a>
-                    </div>
+                    <a class="btn btn-primary border float-right" href="#">+ New App</a>
                 </div>
                 <div class="row justify-content-center mt-5">
                     <% userApp.forEach((userApp) => { %>
                         <% if(currentUser && userApp.author.id.equals(currentUser.id)){ %>
-                            <div class="col-3 text-center mb-2">
-                                <a href="<%= userApp.address %>">
+                            <div class="col-3 text-center mb-2 appBtn">
+                                <a href="/profile/<%= currentUser.id %>/appInfo/<%= userApp.id %>">
                                     <div class="card rounded borderOne">
-                                        <h6 class="card-title my-2"><%= userApp.name %></h6>
+                                        <h6 class="card-title my-2">
+                                            <%= userApp.name %>
+                                        </h6>
                                         <img src="<%= userApp.image %>" class="card-img">
                                     </div>
                                 </a>
@@ -38,13 +38,11 @@
         </div>
         <div class="card col-9 mx-2 justify-content-center appForm">
             <div class="card-body">
-                    <div class="row d-inline">
+                    <div class="row d-inline appFormCloseBtn">
                         <div class="col-4 d-inline-block">
                             <h5>New Apps</h5>
                         </div>
-                        <div class="card rounded d-inline appFormCloseBtn">
-                            <a class="btn btn-warning border float-right" href="#">X</a>
-                        </div>
+                        <a class="btn btn-warning border float-right" href="#">X</a>
                     </div>
                 <div class="row justify-content-center">
                     <div class="col-5 container align-middle">

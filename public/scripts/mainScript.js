@@ -7,13 +7,6 @@ $(function() {
         $(this).removeClass('hoverStyle');
     });
 
-    $("div.appBtn > a").hover( 
-        function(){
-        $(this).addClass('hoverStyle');
-    }, function(){
-        $(this).removeClass('hoverStyle');
-    });
-
     $("li.loginDropdown > a").on("click", () =>{
             $(".loginDropMenu").toggle("display");
         });
@@ -40,9 +33,14 @@ $(function() {
         $(".appList").show(200);
     });
 
-    // $("div.appFormCloseBtn > a").on("click", () =>{
-    //     $(".appForm").hide();
-    //     $(".appList").show(200);
-    // });
+    $("div.appBtn > a").on("click", () =>{
+        $(".appList").hide();
+         $(".appInfo").show(200);
+    });
+
+    $("div.appInfoCloseBtn > a").on("click", () =>{
+        $(".appInfo").hide();
+        $(".appList").show(200);
+    });
 
 });

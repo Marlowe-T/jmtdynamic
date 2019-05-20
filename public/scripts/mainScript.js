@@ -33,14 +33,14 @@ $(function() {
         $(".appList").show(200);
     });
 
-    $("div.appBtn > a").on("click", () =>{
-        $(".appList").hide();
-         $(".appInfo").show(200);
-    });
+    // $("div.appBtn > a").on("click", () =>{
+    //     $(".appList").hide();
+    //     $(".appInfo").show(200);
+    // });
 
-    $("div.appInfoCloseBtn > a").on("click", () =>{
-        $(".appInfo").hide();
-        $(".appList").show(200);
-    });
+    // $("div.appInfoCloseBtn > a").on("click", () =>{
+    //     $(".appInfo").hide();
+    //     $(".appList").show(200);
+    // });
 
 });

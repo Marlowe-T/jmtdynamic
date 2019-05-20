@@ -2,7 +2,7 @@
 
 <div class="container mx-5 mt-4">
     <div class="row">
-        <div class="card col-4 mw-20 px-0 mx-2">
+        <div class="card col-4 mw-20 px-0 mx-2 shadow-lg">
           <img src="/images/blankProfile.png" class="card-img-top rounded" alt="...">
           <div class="card-body p-2">
             <p class="card-text text-center mb-0"><%= currentUser.firstName %> <%= currentUser.lastName %></p>
@@ -10,27 +10,29 @@
             <p class="card-text text-center"><%= currentUser.company %></p>
           </div>
         </div>
-        <div class="card col-9 mx-2 justify-content-center appInfo">
+        <div class="card col-9 mx-2 shadow-lg appInfo">
             <div class="card-body">
                 <div class="row d-inline appInfoCloseBtn">
-                    <div class="col-4 d-inline-block">
-                        <h5><%= userApp.name %></h5>
+                    <div class="col-4 d-inline-block mb-4 ml-1 appNameChgBtn">
+                        <a href="#">
+                            <h5><%= userApp.name %></h5>
+                        </a>
                     </div>
-                    <a class="btn btn-warning border float-right" href="#">X</a>
+                    <a class="btn btn-warning border shadow-sm float-right" href="/profile/<%= currentUser.id %>">X</a>
                 </div>
                 <div class="row">
-                    <div class="col-4">
-                        <img src="<%= userApp.image %>" class="card-img">
+                    <div class="col-4 align-middle">
+                        <img src="<%= userApp.image %>" class="card-img shadow">
                     </div>
                     <div class="col-7">
-                        <h6>Update Log</h6>
+                        <h6><strong>Update Log</strong></h6>
                         <div class="container">
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sit est hic tempore atque possimus perspiciatis illo voluptates id dicta nostrum blanditiis molestiae, a eos. Ipsam sequi ipsa ea culpa!
                             </p>
                         </div>
                         <form action="/profile/<%= currentUser.id %>/deleteApp/<%= userApp.id %>?_method=DELETE" method="POST">
-                            <input type="submit" class="btn btn-primary btn-danger float-right mt-5" value="Delete App">
+                            <input type="submit" class="btn btn-primary btn-danger shadow-sm float-right mt-5" value="Delete App">
                         </form>
                     </div>
                 </div>

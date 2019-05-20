@@ -8,7 +8,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Play', sans-serif;
-    background-color: whitesmoke;
+    background-color: #2fffe3;
     /* background-image: url("/images/plane.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,11 +20,12 @@ form {
     font-family: 'Play', sans-serif;
 }
 
-.nav-item {
+a {
     color: black;
+    text-decoration: none;
 }
 
-a {
+a:hover{
     color: black;
     text-decoration: none;
 }
@@ -44,20 +45,25 @@ nav li {
 
 #navStyles {
     font-family: 'Play', sans-serif;
+    background-color: rgba(99, 99, 99, 0.397);
+}
+
+.nav-btn {
+    background-color: rgba(255, 255, 255, 0.808);
 }
 
 .hoverStyle {
-    background-color: rgba(80,80,80,0.5);
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
 }
 
 .flash-success {
-    color: #155724;
-    background-color: rgba(212,237,218,0.6);
+    color: #000000;
+    background-color: rgb(43, 255, 92);
 }
 
 .flash-danger {
-    color: #721c24;
-    background-color: rgba(248,215,218,0.6);
+    color: #000000;
+    background-color: rgb(255, 61, 78);
 }
 
 #banner {
@@ -89,11 +95,11 @@ div hr {
 }
 
 .backgroundColor {
-    background: rgba(30, 30, 30, 0.808)
+    background: rgba(255, 255, 255, 0.808)
 }
 
 div .card {
-    background: rgba(30, 30, 30, 0.808)
+    background: rgba(255, 255, 255, 0.808)
 }
 
 #contactDeck {
@@ -215,7 +221,7 @@ input {
 }
 
 .appInfo {
-    display: none;
+    /* display: none; */
 }
 
 @media only screen and (min-width: 992px) {
@@ -227,7 +233,7 @@ input {
         position: absolute;
         display: none;
         top: 100%;
-        left: -610%;
+        left: -685%;
         z-index: 1000;
         float: left;
         min-width: 25rem;
@@ -251,7 +257,7 @@ input {
         position: absolute;
         display: none;
         top: 100%;
-        left: -610%;
+        left: -685%;
         z-index: 1000;
         float: left;
         min-width: 25rem;
@@ -275,7 +281,7 @@ input {
         position: absolute;
         display: none;
         top: 100%;
-        left: -115%;
+        left: -141%;
         z-index: 1000;
         float: left;
         min-width: 12rem;

@@ -45,7 +45,7 @@ router.post("/newapp", (req,res) => {
 // Show Route
 //##############
 
-router.get("/userApp/:userApp_id", (req, res) => {
+router.get("/appInfo/:userApp_id", (req, res) => {
     userApp.findById(req.params.userApp_id, (err, foundApp) => {
         if(err){
             req.flash("error", "Application could not be found");

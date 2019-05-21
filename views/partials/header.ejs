@@ -12,6 +12,7 @@
 
 </head>
 <body>
+  <div id="particles-js"></div>
   <nav id="navStyles" class="navbar rounded shadow-sm sticky-top navbar-expand-lg">
       <div class="container-fluid">
           <a class="navbar-brand mr-0 py-1 px-2 rounded" href="/">JMT</a>
@@ -21,13 +22,13 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
             <% if(!currentUser){%>
-              <li class="nav-item nav-btn mx-3">
+              <li class="nav-item nav-btn mx-2">
                 <a class="nav-link btn-sm" href="/projects">Projects</a>
               </li>
-              <li class="nav-item nav-btn mx-3">
+              <li class="nav-item nav-btn mx-2">
                 <a class="nav-link btn-sm" href="/contact">Contact</a>
               </li>
-              <li class="nav-item nav-btn loginDropdown mx-3">
+              <li class="nav-item nav-btn loginDropdown mx-2">
                 <a class="nav-link btn-sm" href="#" id="loginBtn" role="button">
                   Login
                 </a>
@@ -78,21 +79,39 @@
                 </div>
               </li>
             <% } else { %>
-              <li class="nav-item nav-btn mx-3">
-                <a class="nav-link btn-sm" href="/projects">Projects</a>
-              </li>
-              <li class="nav-item nav-btn mx-3">
-                <a class="nav-link btn-sm" href="/contact">Contact</a>
-              </li>
-              <li class="nav-item userDropdown mx-3 rounded">
-                <a class="nav-link nav-btn btn-sm" href="#" role="button">
-                  Hello, <%= currentUser.firstName %>
-                </a>
-                <div class="userDropMenu" aria-labelledby="userBtn">
-                  <a class="dropdown-item rounded" href="/profile/<%= currentUser._id %>">Profile</a>
-                  <a class="dropdown-item rounded logout" href="/logout">Logout</a>
-                </div>
-              </li>
+              <% if(!currentUser.admin){ %>
+                <li class="nav-item nav-btn mx-2">
+                  <a class="nav-link btn-sm" href="/projects">Our Projects</a>
+                </li>
+                <li class="nav-item nav-btn mx-2">
+                  <a class="nav-link btn-sm" href="/contact">Contact Us</a>
+                </li>
+                <li class="nav-item userDropdown mx-2 rounded">
+                  <a class="nav-link nav-btn btn-sm" href="#" role="button">
+                      Hello, <%= currentUser.firstName %>
+                  </a>
+                  <div class="userDropMenu" aria-labelledby="userBtn">
+                    <a class="dropdown-item rounded" href="/profile/<%= currentUser._id %>">Profile</a>
+                    <a class="dropdown-item rounded logout" href="/logout">Logout</a>
+                  </div>
+                </li>
+              <% } else { %>
+                <li class="nav-item nav-btn mx-2">
+                  <a class="nav-link btn-sm" href="/projects">Our Projects</a>
+                </li>
+                <li class="nav-item nav-btn mx-2">
+                  <a class="nav-link btn-sm" href="/contact">Contact Us</a>
+                </li>
+                <li class="nav-item userDropdown mx-2 rounded">
+                  <a class="nav-link nav-btn btn-sm" href="#" role="button">
+                    Hello, <%= currentUser.firstName %>
+                  </a>
+                  <div class="userDropMenu" aria-labelledby="userBtn">
+                    <a class="dropdown-item rounded" href="/profile/<%= currentUser._id %>">WorkShop</a>
+                    <a class="dropdown-item rounded logout" href="/logout">Logout</a>
+                  </div>
+                </li>
+                <% } %>
             <% } %>
             </ul>
           </div>

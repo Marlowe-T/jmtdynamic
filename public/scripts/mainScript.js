@@ -1,5 +1,7 @@
 $(function() {
 
+    particlesJS.load('particles-js', './assets/particles.json');
+
     $("ul.navbar-nav > li").hover( 
         function(){
         $(this).addClass('hoverStyle');

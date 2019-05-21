@@ -78,12 +78,18 @@
                 </div>
               </li>
             <% } else { %>
+              <li class="nav-item nav-btn mx-3">
+                <a class="nav-link btn-sm" href="/projects">Projects</a>
+              </li>
+              <li class="nav-item nav-btn mx-3">
+                <a class="nav-link btn-sm" href="/contact">Contact</a>
+              </li>
               <li class="nav-item userDropdown mx-3 rounded">
-                <a class="nav-link nav-btn btn-sm" href="#" id="userBtn" role="button">
+                <a class="nav-link nav-btn btn-sm" href="#" role="button">
                   Hello, <%= currentUser.firstName %>
                 </a>
                 <div class="userDropMenu" aria-labelledby="userBtn">
-                  <a class="dropdown-item rounded" href="/profile/<%= currentUser._id %>">My Profile</a>
+                  <a class="dropdown-item rounded" href="/profile/<%= currentUser._id %>">Profile</a>
                   <a class="dropdown-item rounded logout" href="/logout">Logout</a>
                 </div>
               </li>

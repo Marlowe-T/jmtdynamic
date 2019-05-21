@@ -24,12 +24,13 @@ router.get("/", (req, res) => {
 router.post("/newapp", (req,res) => {
     var name = req.body.name,
         image =  req.body.image,
+        desc  = req.body.description,
         address = req.body.address,
         author = {
             id: req.user.id,
             username: req.user.username
         }
-        newApp = {name: name, image: image, address: address, author: author};
+        newApp = {name: name, image: image, description: desc, address: address, author: author};
     userApp.create(newApp, (err, newlyCreated) => {
         if(err){
             req.flash("error", "App could not be created... Try again.");
@@ -52,21 +53,6 @@ router.get("/appInfo/:userApp_id", (req, res) => {
             res.redirect("back");
         } else {
             res.render("profile/userAppInfo", {userApp_id: req.params.id, userApp: foundApp});
-        }
-    });
-});
-
-//##############
-// Edit Route
-//##############
-
-router.get("/editProfile", (req, res) => {
-    User.findById(req.params.id, (err, foundUser) => {
-        if(err){
-            req.flash("error", "You dont exist for some reason.. Contact Support");
-            res.redirect("back");
-        } else {
-            res.render("profile/editProfile", {User: foundUser});
         }
     });
 });

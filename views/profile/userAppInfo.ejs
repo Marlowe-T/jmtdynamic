@@ -1,7 +1,7 @@
 <% include ../partials/header.ejs %>
 
 <div class="container mx-5 mt-4">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="card col-4 mw-20 px-0 mx-2 shadow-lg">
             <a href="/profile/<%= currentUser.id %>/editProfile">
                 <img src="/images/blankProfile.png" class="card-img-top shadow-sm rounded" alt="Profile Picture">
@@ -27,15 +27,36 @@
                         <img src="<%= userApp.image %>" class="card-img shadow">
                     </div>
                     <div class="col-7">
-                        <h6><u><strong>Update Log</strong></u></h6>
+                        <h6><u><strong>Description</strong></u></h6>
                         <div class="container">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sit est hic tempore atque possimus perspiciatis illo voluptates id dicta nostrum blanditiis molestiae, a eos. Ipsam sequi ipsa ea culpa!
+                                <%= userApp.description %>
                             </p>
                         </div>
                         <form action="/profile/<%= currentUser.id %>/deleteApp/<%= userApp.id %>?_method=DELETE" method="POST">
                             <input type="submit" class="btn btn-primary btn-danger shadow-sm float-right mt-5" value="Delete App">
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="card col-11 my-3">
+            <div class="card-body">
+                <div class="row d-inline appInfoCloseBtn">
+                    <div class="d-inline-block mb-4 ml-1 appNameChgBtn">
+                        <h5><u><strong>Update Log</strong></u></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="align-middle px-4">
+                        <h6><u><strong>Date</strong></u></h6>
+                        <div class="container">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sit est hic tempore atque possimus perspiciatis illo voluptates id dicta nostrum blanditiis molestiae, a eos. Ipsam sequi ipsa ea culpa!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -33,6 +33,20 @@ $(function() {
         $(".appList").show(200);
     });
 
+    $("div.editProBtn > a").on("click", () =>{
+        $(".appForm").hide();
+        $(".appList").hide();
+        $(".editProForm").show(200);
+    });
+
+    $("div.editProCloseBtn > a").on("click", () =>{
+        $(".editProForm").hide();
+        $(".appForm").hide();
+        $(".appList").show(200);
+    });
+
+
+
     // $("div.appBtn > a").on("click", () =>{
     //     $(".appList").hide();
     //     $(".appInfo").show(200);

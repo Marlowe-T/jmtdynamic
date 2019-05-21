@@ -2,8 +2,8 @@
 
 <div class="container mx-5 mt-4">
     <div class="row">
-        <div class="card col-4 mw-20 px-0 mx-2 shadow-lg">
-            <a href="/profile/<%= currentUser.id %>/editProfile">
+        <div class="card col-4 mw-20 px-0 mx-2 shadow-lg editProBtn">
+            <a href="#">
                 <img src="/images/blankProfile.png" class="card-img-top shadow-sm rounded" alt="Profile Picture">
             </a>
             <div class="card-body p-2">
@@ -56,9 +56,42 @@
                                 <input class="form-control" type="text" name=image placeholder="Image">
                                 <label>Address</label>
                                 <input class="form-control" type="text" name=address placeholder="http://www.app.com">
+                                <label>Description</label>
+                                <textarea class="form-control" type="text" name=description placeholder="An app that can travel through time!!!"></textarea>
                             </div>
                             <button class="btn btn-primary float-right" type="submit">Save</button>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-9 mx-2 shadow-lg editProForm">
+            <div class="card-body">
+                <div class="row d-inline editProCloseBtn">
+                    <div class="col-4 d-inline-block mb-3 ml-1">
+                        <h5>Edit Profile</h5>
+                    </div>
+                    <a class="btn btn-warning border shadow-sm float-right" href="#">X</a>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="/profile/<%= currentUser.id %>?_method=PUT" method="POST">
+                                    <div class="container w-75">
+                                        <label>First Name:</label>
+                                        <input class="form-control" type="text" name="user[firstName]" value="<%= currentUser.firstName %>">
+                                        <label>Last Name:</label>
+                                        <input class="form-control" type="text" name="user[lastName]" value="<%= currentUser.lastName %>">
+                                        <label>Email:</label>
+                                        <input class="form-control" type="text" name="user[username]" value="<%= currentUser.username %>">
+                                        <label>Company:</label>
+                                        <input class="form-control" type="text" name="user[company]" value="<%= currentUser.company %>">
+                                    </div>
+                                    <button class="btn btn-primary float-right mt-2" type="submit">Save</button>
+                                </form>  
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

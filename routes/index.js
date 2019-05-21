@@ -34,7 +34,7 @@ router.post("/register", (req, res) => {
 
 router.post("/login", passport.authenticate("local",
     {   successRedirect: "back",
-        successFlash: "Hello, welcome back!",
+        successFlash: "Welcome back!",
         failureRedirect: "back",
         failureFlash: "Invalid Username or Password."
     }), (req, res) => {

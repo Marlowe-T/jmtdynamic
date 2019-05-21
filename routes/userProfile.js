@@ -57,17 +57,48 @@ router.get("/appInfo/:userApp_id", (req, res) => {
 });
 
 //##############
+// Edit Route
+//##############
+
+router.get("/editProfile", (req, res) => {
+    User.findById(req.params.id, (err, foundUser) => {
+        if(err){
+            req.flash("error", "You dont exist for some reason.. Contact Support");
+            res.redirect("back");
+        } else {
+            res.render("profile/editProfile", {User: foundUser});
+        }
+    });
+});
+
+//##############
+// Update Route
+//##############
+
+router.put("/", (req,res) => {
+    User.findOneAndUpdate(req.params.id, req.body.user, (err, updatedUser) => {
+        if(err){
+            req.flash("error", "Uh Oh, The info failed to update.. Please Contact Support");
+            res.redirect("/profile/" + req.user.id);
+        }else{
+            req.flash("success", "User info updated successfully");
+            res.redirect("/profile/" + req.user.id)
+        }
+    });
+});
+
+//##############
 // Destroy Route
 //##############
 
 router.delete("/deleteApp/:userApp_id", (req,res) => {
-    userApp.findByIdAndRemove(req.params.id, (err) => {
+    userApp.findOneAndRemove(req.params.userApp_id, (err) => {
         if(err){
             req.flash("error", "App failed to delete");
             res.redirect("back");
         } else {
-            req.flash("error", "App Deleted");
-            res.redirect("back");
+            req.flash("success", "App Deleted");
+            res.redirect("/profile/" + req.user.id);
         }
     });
 });

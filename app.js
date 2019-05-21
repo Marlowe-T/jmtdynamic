@@ -19,6 +19,7 @@ const indexRoutes   = require("./routes/index"),
 const port = process.env.PORT || 8080;
 
 mongoose.connect("mongodb+srv://dbadmin:N0v3mb3r@cluster0-aqceu.mongodb.net/JMTDevSite?retryWrites=true", {useNewUrlParser: true});
+mongoose.set('useFindAndModify', false);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");

@@ -3,12 +3,14 @@
 <div class="container mx-5 mt-4">
     <div class="row">
         <div class="card col-4 mw-20 px-0 mx-2 shadow-lg">
-          <img src="/images/blankProfile.png" class="card-img-top rounded" alt="...">
-          <div class="card-body p-2">
-            <p class="card-text text-center mb-0"><%= currentUser.firstName %> <%= currentUser.lastName %></p>
-            <p class="card-text text-center mb-0 txt-size-sm font-weight-bold"><em>with</em></p>
-            <p class="card-text text-center"><%= currentUser.company %></p>
-          </div>
+            <a href="/profile/<%= currentUser.id %>/editProfile">
+                <img src="/images/blankProfile.png" class="card-img-top shadow-sm rounded" alt="Profile Picture">
+            </a>
+            <div class="card-body p-2">
+              <p class="card-text text-center mb-0"><%= currentUser.firstName %> <%= currentUser.lastName %></p>
+              <p class="card-text text-center mb-0 txt-size-sm font-weight-bold"><em>with</em></p>
+              <p class="card-text text-center"><%= currentUser.company %></p>
+            </div>
         </div>
         <div class="card col-9 mx-2 shadow-lg appInfo">
             <div class="card-body">
@@ -25,7 +27,7 @@
                         <img src="<%= userApp.image %>" class="card-img shadow">
                     </div>
                     <div class="col-7">
-                        <h6><strong>Update Log</strong></h6>
+                        <h6><u><strong>Update Log</strong></u></h6>
                         <div class="container">
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sit est hic tempore atque possimus perspiciatis illo voluptates id dicta nostrum blanditiis molestiae, a eos. Ipsam sequi ipsa ea culpa!

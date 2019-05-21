@@ -8,7 +8,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Play', sans-serif;
-    background-color: #2fffe3;
+    background-color: #8ccac7;
     /* background-image: url("/images/plane.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -28,6 +28,20 @@ a {
 a:hover{
     color: black;
     text-decoration: none;
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
+}
+
+button:hover {
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
+}
+
+input:hover {
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
+}
+
+.logout:hover {
+    color: #000000;
+    background-color: rgb(255, 61, 78);
 }
 
 .contentHeight {
@@ -58,12 +72,12 @@ nav li {
 
 .flash-success {
     color: #000000;
-    background-color: rgb(43, 255, 92);
+    background-color: rgba(43, 255, 93, 0.5);
 }
 
 .flash-danger {
     color: #000000;
-    background-color: rgb(255, 61, 78);
+    background-color: rgb(255, 61, 78, 0.5);
 }
 
 #banner {
@@ -204,8 +218,6 @@ input {
     z-index: 1000;
     float: left;
     min-width: 25rem;
-    padding: .5rem 0;
-    margin: .125rem 0 0;
     font-size: 1rem;
     color: #212529;
     text-align: left;
@@ -285,8 +297,6 @@ input {
         z-index: 1000;
         float: left;
         min-width: 12rem;
-        padding: .5rem 0;
-        margin: .125rem 0 0;
         font-size: 1rem;
         color: #212529;
         text-align: center;

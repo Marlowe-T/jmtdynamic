@@ -47,7 +47,9 @@ $(function() {
         $(".appList").show(200);
     });
 
-
+    $("div.partiToggle > a").on("click", () =>{
+        $("#particles-js").toggle("visibility");
+    });
 
     // $("div.appBtn > a").on("click", () =>{
     //     $(".appList").hide();

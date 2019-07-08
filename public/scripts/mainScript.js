@@ -1,7 +1,5 @@
 $(function() {
 
-    particlesJS.load('particles-js', './assets/particles.json');
-
     $("ul.navbar-nav > li").hover( 
         function(){
         $(this).addClass('hoverStyle');
@@ -46,19 +44,5 @@ $(function() {
         $(".appForm").hide();
         $(".appList").show(200);
     });
-
-    $("div.partiToggle > a").on("click", () =>{
-        $("#particles-js").toggle("visibility");
-    });
-
-    // $("div.appBtn > a").on("click", () =>{
-    //     $(".appList").hide();
-    //     $(".appInfo").show(200);
-    // });
-
-    // $("div.appInfoCloseBtn > a").on("click", () =>{
-    //     $(".appInfo").hide();
-    //     $(".appList").show(200);
-    // });
 
 });

@@ -30,31 +30,21 @@ a {
 a:hover{
     color: black;
     text-decoration: none;
-    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
 }
 
 button:hover {
     box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
 }
 
-input:hover {
-    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
-}
-
-.logout:hover {
-    color: #000000;
-    background-color: rgb(255, 61, 78);
-}
-
-.contentHeight {
-    min-height: 100%;
+.content {
+    min-height: 70%;
 }
 
 #navStyles {
     font-family: 'Play', sans-serif;
 }
 
-#logo {
+#navlogo {
     height: 150px;
     width: 200px;
 }
@@ -68,7 +58,7 @@ nav li {
 }
 
 .hoverStyle {
-    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
+    text-shadow: 2px 2px 3px #a3a3a3;
 }
 
 .flash-success {
@@ -105,18 +95,12 @@ nav li {
     width: 80% !important;
 }
 
-#contactDeck {
-    max-width: 800px;
-    margin-top: 50px;
+.port-img {
+    width: 100%;
 }
 
-.cardTextStyles {
-    padding: 2em;
-    font-size: 18px;
-}
-
-.cardSizer {
-    width: 32%;
+.cont-img {
+    width: 100%;
 }
 
 .txt-size-sm {
@@ -143,164 +127,6 @@ nav li {
     height: 100%;
 }
 
-label {
-    margin-bottom: 0;
-}
-
-input {
-    margin-bottom: .5em;
-}
-
-.loginDropdown {
-    position: relative;
-}
-
-.loginDropMenu {
-    position: absolute;
-    display: none;
-    top: 100%;
-    left: -7%;
-    z-index: 1000;
-    float: left;
-    min-width: 25rem;
-    padding: .5rem 0;
-    margin: .125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: .25rem;
-}
-
-.regDropdown {
-    position: relative;
-}
-
-.regDropMenu {
-    position: absolute;
-    display: none;
-    top: 100%;
-    left: -7%;
-    z-index: 1000;
-    float: left;
-    min-width: 25rem;
-    padding: .5rem 0;
-    margin: .125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: .25rem;
-}
-
-.userDropdown {
-    position: relative;
-}
-
-.userDropMenu {
-    position: absolute;
-    display: none;
-    top: 100%;
-    left: -7%;
-    z-index: 1000;
-    float: left;
-    min-width: 25rem;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: .25rem;
-}
-
-.appForm {
-    display: none;
-}
-
-.editProForm {
-    display: none;
-}
-
-@media only screen and (min-width: 992px) {
-    .loginDropdown {
-        position: relative;
-    }
-    
-    .loginDropMenu {
-        position: absolute;
-        display: none;
-        top: 100%;
-        left: -685%;
-        z-index: 1000;
-        float: left;
-        min-width: 25rem;
-        padding: .5rem 0;
-        margin: .125rem 0 0;
-        font-size: 1rem;
-        color: #212529;
-        text-align: left;
-        list-style: none;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid rgba(0,0,0,.15);
-        border-radius: .25rem;
-    }
-    
-    .regDropdown {
-        position: relative;
-    }
-    
-    .regDropMenu {
-        position: absolute;
-        display: none;
-        top: 100%;
-        left: -685%;
-        z-index: 1000;
-        float: left;
-        min-width: 25rem;
-        padding: .5rem 0;
-        margin: .125rem 0 0;
-        font-size: 1rem;
-        color: #212529;
-        text-align: left;
-        list-style: none;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid rgba(0,0,0,.15);
-        border-radius: .25rem;
-    }
-
-    .userDropdown {
-        position: relative;
-    }
-    
-    .userDropMenu {
-        position: absolute;
-        display: none;
-        top: 100%;
-        left: -143%;
-        z-index: 1000;
-        float: left;
-        min-width: 12rem;
-        font-size: 1rem;
-        color: #212529;
-        text-align: center;
-        list-style: none;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid rgba(0,0,0,.15);
-        border-radius: .25rem;
-    }
-    
-}
 
 /* width */
 ::-webkit-scrollbar {

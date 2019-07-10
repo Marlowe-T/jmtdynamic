@@ -1,13 +1,17 @@
 <% include ../partials/header.ejs %>
 
 <div class="container-fluid">
-  <ul class="list-unstyled">
-    <div class="row d-flex justify-content-center"> 
-      <li id="portOne" class="col-lg-4 mr-3 border">
-        <img src="images/portfolioSite.png" class="port-img" alt="...">
-      </li>
-      <li id="portTwo" class="col-lg-4 ml-3 border">
-        <img src="images/portfolioSite.png" class="port-img" alt="...">
+  <div class="container">
+    <div class="text-center my-3">
+      <h1>My Portfolio</h1>
+      <p class="my-1">Apps I have collaborated on or built myself</p>
+      <p class="my-1">Click on one to learn more</p>
+    </div>
+  </div>
+  <ul id="portList" class="list-unstyled">
+    <div class="row justify-content-center"> 
+      <li class="col-lg-4 border">
+        <a><img src="images/portfolioSite.png" class="port-img" alt="..."></a>
       </li>
     </div>
   </ul>

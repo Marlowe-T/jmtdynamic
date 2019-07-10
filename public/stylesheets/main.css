@@ -1,18 +1,15 @@
-:root {
-    --main-bg-color: rgb(255, 255, 255);
-}
-
 html, body {
+    height: 100%;
+    width: 100%;
     color: black;
 }
 
 body {
-    background-color: var(--main-bg-color);
     font-family: 'Play', sans-serif;
 }
 
-.content {
-    min-height: 70%;
+nav li {
+    margin: 0 1.5rem;
 }
 
 a {
@@ -30,18 +27,87 @@ button:hover {
     box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
 }
 
+#content {
+    min-height: 65%;
+}
+
+#banner {
+    padding: 10rem 2rem 25rem;
+}
+
 #navlogo {
     height: 150px;
     width: 200px;
     margin: 0 1rem;
 }
 
+#portList .row {
+    margin: 2rem 0rem;
+}
+
+#portList li {
+    margin: 1.5rem 1.5rem;
+}
+
+#portList li:hover {
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226);
+}
+
+#contactList {
+    margin-top: 10rem;
+}
+
+#contactList label {
+    margin: .25rem;
+}
+
+#success {
+    margin-top: 10rem;
+    background-color: #bbf3bb;
+}
+
 .nav-btn a {
     font-size: 18px;
 }
 
-nav li {
-    margin: 0 1.5rem;
+.headerStyling {
+    font-size: 3.25em;
+    margin-bottom: 0;
+}
+
+.subHeaderStyling {
+    font-size: 4em;
+    margin-bottom: 1.5rem;
+}
+
+.sloganStyling {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.card {
+    margin: 1rem 1rem;
+}
+
+.ideck li {
+    padding: 5px 0px;
+}
+
+.cardContent {
+    width: 75%;
+    padding: 1rem 0;
+}
+
+.row .card {
+    width: 50%;
+}
+
+.port-img {
+    width: 100%;
+}
+
+.contact-img {
+    width: 100%;
 }
 
 .flash-success {
@@ -87,6 +153,18 @@ nav li {
         margin: 0;
     }
 
+    #banner {
+        padding: 10rem 2rem 20rem;
+    }
+
+    #contactList {
+        margin-top: 2rem;
+    }
+
+    nav li {
+        margin: 0 1.5rem;
+    }
+
     .navbar-toggler {
         padding: 0rem;
     }
@@ -94,8 +172,28 @@ nav li {
     .nav-btn a {
         font-size: 18px;
     }
+
+    .headerStyling {
+        font-size: 1.75em;
+        margin-bottom: 0;
+    }
     
-    nav li {
-        margin: 0 1.5rem;
+    .subHeaderStyling {
+        font-size: 2.5em;
+        margin-bottom: 1.5rem;
+    }
+    
+    .sloganStyling {
+        font-size: .75em;
+        margin-bottom: 0;
+    }
+
+    .row .card {
+        width: 100%;
+    }
+
+    .cardContent {
+        width: 100%;
+        padding: 1rem 0;
     }
   }

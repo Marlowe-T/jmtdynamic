@@ -2,15 +2,8 @@
     --main-bg-color: rgb(255, 255, 255);
 }
 
-
 html, body {
-    height: 100%;
-    width: 100%;
     color: black;
-}
-
-html {
-    display: flex;
 }
 
 body {
@@ -18,8 +11,8 @@ body {
     font-family: 'Play', sans-serif;
 }
 
-.card {
-    margin: 1rem 1rem;
+.content {
+    min-height: 70%;
 }
 
 a {
@@ -30,35 +23,25 @@ a {
 a:hover{
     color: black;
     text-decoration: none;
+    text-shadow: 2px 2px 3px #a3a3a3;
 }
 
 button:hover {
     box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
 }
 
-.content {
-    min-height: 70%;
-}
-
-#navStyles {
-    font-family: 'Play', sans-serif;
-}
-
 #navlogo {
     height: 150px;
     width: 200px;
-}
-
-nav li {
-    border-radius: .25rem;
+    margin: 0 1rem;
 }
 
 .nav-btn a {
     font-size: 18px;
 }
 
-.hoverStyle {
-    text-shadow: 2px 2px 3px #a3a3a3;
+nav li {
+    margin: 0 1.5rem;
 }
 
 .flash-success {
@@ -70,63 +53,6 @@ nav li {
     color: #000000;
     background-color: rgb(255, 61, 78, 0.5);
 }
-
-#banner {
-    padding: 10rem 2rem 25rem;
-}
-
-.headerStyling {
-    font-size: 50px;
-}
-
-.subHeaderStyling {
-    font-size: 70px;
-}
-
-.sloganStyling {
-    font-size: 16px !important;
-}
-
-.ideck li {
-    padding: 5px 0px;
-}
-
-#deck {
-    width: 80% !important;
-}
-
-.port-img {
-    width: 100%;
-}
-
-.cont-img {
-    width: 100%;
-}
-
-.txt-size-sm {
-    font-size: 12px;
-}
-
-.mw-20 {
-    max-width: 20%;
-}
-
-.p-05 {
-    padding: .5rem;
-}
-
-.py-05 {
-    padding: .5rem 0 .5rem 0;
-}
-
-.p-y-6 {
-    padding: 6em 0em 6em 0em;
-}
-
-.h-100 {
-    height: 100%;
-}
-
 
 /* width */
 ::-webkit-scrollbar {
@@ -149,3 +75,27 @@ nav li {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+
+@media only screen and (max-width: 767px) {
+    #navlogo {
+        display: none;
+    }
+
+    #hamlogo {
+        height: 50px;
+        width: 60px;
+        margin: 0;
+    }
+
+    .navbar-toggler {
+        padding: 0rem;
+    }
+    
+    .nav-btn a {
+        font-size: 18px;
+    }
+    
+    nav li {
+        margin: 0 1.5rem;
+    }
+  }

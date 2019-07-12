@@ -1,19 +1,20 @@
 <% include ../partials/header.ejs %>
 
-<div class="container-fluid">
-  <div class="container">
-    <div class="text-center my-3">
-      <h1>My Portfolio</h1>
-      <p class="my-1">Apps I have collaborated on or built myself</p>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="text-center my-3 bg-box">
+        <h1>My Portfolio</h1>
+        <p class="my-1">Apps I have collaborated on or built myself</p>
+      </div>
     </div>
+    <ul id="portList" class="list-unstyled">
+      <div class="row justify-content-center"> 
+        <li class="col-lg-4 p-0 border">
+          <a><img src="images/portfolioSite.png" class="port-img" alt="..."></a>
+        </li>
+      </div>
+    </ul>
   </div>
-  <ul id="portList" class="list-unstyled">
-    <div class="row justify-content-center"> 
-      <li class="col-lg-4 p-0 border">
-        <a><img src="images/portfolioSite.png" class="port-img" alt="..."></a>
-      </li>
-    </div>
-  </ul>
 </div>
 
 <% include ../partials/footer.ejs %>

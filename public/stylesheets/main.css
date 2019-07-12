@@ -1,11 +1,17 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    color: black;
+html{
+    min-height: 100%;
+    min-width: 100%;
 }
 
 body {
+    height: 100vh;
+    color:black;
     font-family: 'Play', sans-serif;
+}
+
+nav {
+    padding-top: 0!important;
+    background: linear-gradient(rgba(255, 255, 255, 0.719), rgba(255, 255, 255, 0));
 }
 
 nav li {
@@ -20,25 +26,51 @@ a {
 a:hover{
     color: black;
     text-decoration: none;
-    text-shadow: 2px 2px 3px #a3a3a3;
+    text-shadow: 2px 2px 3px #8f8f8f;
 }
 
 button:hover {
-    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226)!important;
+    box-shadow: 0 .25rem .5rem rgba(255, 255, 255, 0.226);
+    transform: translateY(-2px);
 }
 
-#content {
-    min-height: 65%;
+#wrapperOne {
+    height: calc(100% - 50px);
+    color: white;
+    background-image: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#banner {
-    padding: 10rem 2rem 25rem;
+#wrapperTwo {
+    color: white;
+    background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#wrapperThree {
+    color: white;
+    background-image: url("/images/luke-chesser-hQo6Uyo4nBg-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#wrapperFour {
+    color: white;
+    background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #navlogo {
     height: 150px;
     width: 200px;
     margin: 0 1rem;
+}
+
+#banner {
+    padding: 10rem 2rem 25rem;
 }
 
 #portList .row {
@@ -50,7 +82,7 @@ button:hover {
 }
 
 #portList li:hover {
-    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.226);
+    transform: translateY(-2px);
 }
 
 #contactList {
@@ -64,6 +96,37 @@ button:hover {
 #success {
     margin-top: 10rem;
     background-color: #bbf3bb;
+}
+
+#closingBanner {
+    background: linear-gradient(rgba(0, 0, 0, 0.308),rgba(0, 0, 0, 0));
+}
+
+#closingBannerImg {
+    margin: 0 1rem;
+    height: 50px;
+    width: 50px;
+}
+
+.centerY {
+    margin: 25% 0;
+}
+
+.centerX {
+    margin: 0 25%;
+}
+
+.bg-box {
+    background: rgba(0, 0, 0, 0.603);
+    border-radius: .25rem;
+}
+
+.bg-shadow-r {
+    box-shadow: .5rem .5rem .5rem rgba(204, 204, 204, 0.568);
+}
+
+.bg-shadow-l {
+    box-shadow: -.5rem .5rem .5rem rgba(204, 204, 204, 0.568);
 }
 
 .nav-btn a {
@@ -86,6 +149,7 @@ button:hover {
 }
 
 .card {
+    border: none;
     margin: 1rem 1rem;
 }
 
@@ -98,8 +162,38 @@ button:hover {
     padding: 1rem 0;
 }
 
-.row .card {
-    width: 50%;
+.frontEnd-img {
+    height: 75px;
+    width: 75px
+}
+
+.frontEnd-img:hover {
+    transform: translateY(-2px);
+}
+
+.frontEnd-img-lg {
+    height: 75px;
+    width: 125px
+}
+
+.frontEnd-img-lg:hover {
+    transform: translateY(-2px);
+}
+
+.about-box {
+    max-width: 65%;
+    margin-top: 3rem;
+}
+
+.about-title {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.about-body {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .port-img {
@@ -143,6 +237,33 @@ button:hover {
 }
 
 @media only screen and (max-width: 767px) {
+
+    #wrapperOne {
+        color: white;
+        height: 100%;
+        background-image: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    #wrapperTwo {
+        background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    #wrapperThree {
+        background-image: url("/images/luke-chesser-hQo6Uyo4nBg-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    #wrapperFour {
+        background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     #navlogo {
         display: none;
     }

@@ -1,17 +1,17 @@
 <% include ../partials/header.ejs %>
 
-<div id="banner" class="container text-center bg-transparent text-uppercase">
-    <h4 class="headerStyling">Professional</h4>
-    <h1 class="subHeaderStyling">Web Development</h1>
-    <p class="sloganStyling">Get a responsive, professional, asthetic website.</br>With zero hassle.</p>
+    <div id="banner" class="container text-center bg-transparent text-uppercase">
+        <h4 class="headerStyling">Professional</h4>
+        <h1 class="subHeaderStyling">Web Development</h1>
+        <p class="sloganStyling">Get a responsive, professional, asthetic website.</br>With zero hassle.</p>
+    </div>
 </div>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="card bg-transparent text-center">
-            <div class="card-body cardTextStyles">
+<div id="wrapperTwo">
+    <div class="row justify-content-md-center">
+        <div class="col-md-6 card text-center bg-transparent">
+            <div class="card-body bg-box bg-shadow-r">
                 <h3 class="card-title">Front End</h3>
-                <hr class="my-4 dividerColor">
+                <hr class="my-4">
                 <div class="container-fluid cardContent text-right">
                     <ul class="ideck">
                         <li>
@@ -27,13 +27,30 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-5">
+            <div class="row centerY">
+                <div class="col-md-3">
+                    <img src="images/logomono-html5-mono.png" class="frontEnd-img" alt="...">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/logomono-css3-mono.png" class="frontEnd-img" alt="...">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/logomono-javascript-mono.png" class="frontEnd-img" alt="...">
+                </div>
+                <div class="col-md-3">
+                    <img src="images/logomono-node-js-mono.png" class="frontEnd-img-lg" alt="...">
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="row justify-content-end">
-        <div class="card bg-transparent text-center">
-            <div class="card-body cardTextStyles">
+</div>
+<div id="wrapperThree">
+    <div class="row justify-content-end mx-1">
+        <div class="col-md-6 card text-center bg-transparent">
+            <div class="card-body bg-box bg-shadow-l">
                 <h3 class="card-title">UX / UI</h3>
-                <hr class="my-4 dividerColor">
+                <hr class="my-4">
                 <div class="container-fluid cardContent text-right">
                     <ul class="ideck">
                         <li>
@@ -50,12 +67,13 @@
             </div>
         </div>
     </div>
-    
-    <div class="row">
-        <div class="card bg-transparent text-center">
-            <div class="card-body cardTextStyles">
+</div>
+<div id="wrapperFour">
+    <div class="row mx-1">
+        <div class="col-md-6 card text-center bg-transparent">
+            <div class="card-body bg-box bg-shadow-r">
                 <h3 class="card-title">Back End</h3>
-                <hr class="my-4 dividerColor">
+                <hr class="my-4">
                 <div class="container-fluid cardContent text-right">
                     <ul class="ideck">
                         <li>
@@ -73,7 +91,5 @@
         </div>
     </div>
 </div>
-
-
 
 <% include ../partials/footer.ejs %>

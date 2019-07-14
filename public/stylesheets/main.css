@@ -11,7 +11,7 @@ body {
 
 nav {
     padding-top: 0!important;
-    background: linear-gradient(rgba(255, 255, 255, 0.719), rgba(255, 255, 255, 0));
+    background: radial-gradient(rgba(255, 255, 255, 0.527), rgba(255, 255, 255, 0) 55%);
 }
 
 nav li {
@@ -20,7 +20,6 @@ nav li {
 
 a {
     color: black;
-    text-decoration: none;
 }
 
 a:hover{
@@ -35,9 +34,9 @@ button:hover {
 }
 
 #wrapperOne {
-    height: calc(100% - 50px);
+    height: 100%;
     color: white;
-    background-image: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg");
+    background: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -73,6 +72,14 @@ button:hover {
     padding: 10rem 2rem 25rem;
 }
 
+#non-mobile {
+    display: flex;
+}
+
+#mobile {
+    display: none;
+}
+
 #portList .row {
     margin: 2rem 0rem;
 }
@@ -89,6 +96,10 @@ button:hover {
     margin-top: 10rem;
 }
 
+#contactList a {
+    color: white;
+}
+
 #contactList label {
     margin: .25rem;
 }
@@ -99,10 +110,11 @@ button:hover {
 }
 
 #closingBanner {
-    background: linear-gradient(rgba(0, 0, 0, 0.308),rgba(0, 0, 0, 0));
+    background: black;
 }
 
 #closingBannerImg {
+    background: radial-gradient(rgba(255, 255, 255, 0.527), rgba(255, 255, 255, 0) 80%);
     margin: 0 1rem;
     height: 50px;
     width: 50px;
@@ -148,9 +160,15 @@ button:hover {
     margin-bottom: 0;
 }
 
+.row {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+
 .card {
     border: none;
-    margin: 1rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .ideck li {
@@ -173,7 +191,7 @@ button:hover {
 
 .frontEnd-img-lg {
     height: 75px;
-    width: 125px
+    width: 145px;
 }
 
 .frontEnd-img-lg:hover {
@@ -269,6 +287,7 @@ button:hover {
     }
 
     #hamlogo {
+        background: radial-gradient(rgba(255, 255, 255, 0.527), rgba(255, 255, 255, 0) 80%);
         height: 50px;
         width: 60px;
         margin: 0;
@@ -278,11 +297,25 @@ button:hover {
         padding: 10rem 2rem 20rem;
     }
 
+    #non-mobile {
+        display: none;
+    }
+    
+    #mobile {
+        display: flex;
+    }
+
     #contactList {
         margin-top: 2rem;
     }
 
+    nav {
+        background: rgba(255, 255, 255, 0);
+    }
+
     nav li {
+        text-align: center;
+        background: radial-gradient(rgba(255, 255, 255, 0.527), rgba(255, 255, 255, 0) 55%);
         margin: 0 1.5rem;
     }
 

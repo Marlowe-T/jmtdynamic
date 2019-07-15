@@ -5,13 +5,14 @@ html{
 
 body {
     height: 100vh;
-    color:black;
+    color: white;
+    background: black;
     font-family: 'Play', sans-serif;
 }
 
 nav {
     padding-top: 0!important;
-    background: radial-gradient(rgba(255, 255, 255, 0.527), rgba(255, 255, 255, 0) 55%);
+    background: rgba(0, 0, 0, 0.25);
 }
 
 nav li {
@@ -19,13 +20,13 @@ nav li {
 }
 
 a {
-    color: black;
+    color: white;
 }
 
 a:hover{
-    color: black;
+    color: white;
     text-decoration: none;
-    text-shadow: 2px 2px 3px #8f8f8f;
+    text-shadow: 3px 2px 3px #f8f8f8;
 }
 
 button:hover {
@@ -109,10 +110,6 @@ button:hover {
     background-color: #bbf3bb;
 }
 
-#closingBanner {
-    background: black;
-}
-
 #closingBannerImg {
     background: radial-gradient(rgba(255, 255, 255, 0.527), rgba(255, 255, 255, 0) 80%);
     margin: 0 1rem;
@@ -129,7 +126,7 @@ button:hover {
 }
 
 .bg-box {
-    background: rgba(0, 0, 0, 0.603);
+    background: rgba(0, 0, 0, 0.541);
     border-radius: .25rem;
 }
 
@@ -287,7 +284,6 @@ button:hover {
     }
 
     #hamlogo {
-        background: radial-gradient(rgba(255, 255, 255, 0.527), rgba(255, 255, 255, 0) 80%);
         height: 50px;
         width: 60px;
         margin: 0;
@@ -310,12 +306,12 @@ button:hover {
     }
 
     nav {
-        background: rgba(255, 255, 255, 0);
+        margin-top: 1rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.747),rgba(0, 0, 0, 0));
     }
 
     nav li {
         text-align: center;
-        background: radial-gradient(rgba(255, 255, 255, 0.527), rgba(255, 255, 255, 0) 55%);
         margin: 0 1.5rem;
     }
 

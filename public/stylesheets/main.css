@@ -35,8 +35,8 @@ button:hover {
 }
 
 #wrapperOne {
-    height: 100%;
     color: white;
+    height: 100%;
     background: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;

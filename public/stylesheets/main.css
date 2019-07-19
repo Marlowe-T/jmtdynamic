@@ -26,12 +26,17 @@ a {
 a:hover{
     color: white;
     text-decoration: none;
+    transform: translateY(-1px) scale(1.05);
     text-shadow: 3px 2px 3px #f8f8f8;
 }
 
 button:hover {
     box-shadow: 0 .25rem .5rem rgba(255, 255, 255, 0.226);
     transform: translateY(-2px);
+}
+
+h3 {
+    font-size: 3rem;
 }
 
 #wrapperOne {
@@ -74,6 +79,8 @@ button:hover {
 }
 
 #banner {
+    text-align: center;
+    text-transform: uppercase;
     padding: 10rem 2rem 25rem;
 }
 
@@ -94,7 +101,8 @@ button:hover {
 }
 
 #portList li:hover {
-    transform: translateY(-2px);
+    box-shadow: 0rem .5rem 1rem rgba(226, 226, 226, 0.452);
+    transform: translateY(-4px) scale(1.01);
 }
 
 #contactList {
@@ -140,6 +148,10 @@ button:hover {
 
 .bg-shadow-l {
     box-shadow: -.5rem .5rem .5rem rgba(204, 204, 204, 0.568);
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .nav-btn a {

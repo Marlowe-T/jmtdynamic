@@ -1,7 +1,7 @@
 
 $(document).on("scroll", () => {
     var pageTop = $(document).scrollTop();
-    var pageBottom = pageTop + $(window).height() / 2;
+    var pageBottom = pageTop + $(window).height() * .65;
     var leftTags = $("div.fadeLeft");
     var rightTags = $("div.fadeRight");
 

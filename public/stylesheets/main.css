@@ -40,6 +40,7 @@ button:hover {
     background: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 #wrapperTwo {
@@ -47,6 +48,7 @@ button:hover {
     background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 #wrapperThree {
@@ -54,6 +56,7 @@ button:hover {
     background-image: url("/images/luke-chesser-hQo6Uyo4nBg-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 #wrapperFour {
@@ -61,6 +64,7 @@ button:hover {
     background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 #navlogo {
@@ -251,41 +255,62 @@ button:hover {
     background: #555; 
 }
 
+/* ########################## */
+/* #######ANIMATIONS######### */
+/* ########################## */
+
 .fadeLeft {
-    overflow: hidden;
     opacity: 0;
     transform: translateX(100%);
     transition: all 1.5s;
 }
 
-.fadeLeft.animate {
-    transform: translateX(0);
-    opacity: 1;
-}
-
 .fadeRight {
-    overflow: hidden;
     opacity: 0;
     transform: translateX(-100%);
     transition: all 1.5s;
 }
 
-.fadeRight.animate {
+.animate {
     transform: translateX(0);
     opacity: 1;
 }
 
-@keyframes SlideLeft {
-    from {
-        margin-left: 100%;
-        width: 300%;
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(75%);
+        opacity: 0;
     }
-
-    to {
-        margin-left: 0%
-        width 100%;
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-75%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slideLeft {
+    overflow: hidden;
+    animation: 1s ease-out 0s 1 slideFromRight;
+}
+
+.slideRight {
+    overflow: hidden;
+    animation: 1s ease-out 0s 1 slideFromLeft;
+}
+
+/* ########################## */
+/* #########MOBILE########### */
+/* ########################## */
 
 @media only screen and (max-width: 767px) {
 

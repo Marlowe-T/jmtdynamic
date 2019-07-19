@@ -251,6 +251,42 @@ button:hover {
     background: #555; 
 }
 
+.fadeLeft {
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1.5s;
+}
+
+.fadeLeft.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.fadeRight {
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.fadeRight.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@keyframes SlideLeft {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%
+        width 100%;
+    }
+}
+
 @media only screen and (max-width: 767px) {
 
     #wrapperOne {

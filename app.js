@@ -6,8 +6,8 @@ const methodOverride = require("method-override"),
       app            = express();
 
 const indexRoutes   = require("./routes/index"),
-      contactRoutes = require("./routes/contact"),
       portfolioRoutes = require("./routes/portfolio"),
+      servicesRoutes = require("./routes/services"),
       aboutRoutes = require("./routes/about");
 
 const port = process.env.PORT || 8080;
@@ -33,7 +33,7 @@ app.use(function(req, res, next){
 
 app.use("/", indexRoutes);
 app.use("/about", aboutRoutes);
-app.use("/contact", contactRoutes);
+app.use("/services", servicesRoutes);
 app.use("/portfolio", portfolioRoutes);
 
 

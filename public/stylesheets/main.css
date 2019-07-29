@@ -295,6 +295,7 @@ p {
 
 #serviceMenu {
     padding-top: 6rem;
+    overflow: hidden;
 }
 
 #serviceMenu .row {
@@ -611,38 +612,19 @@ p {
     }
 
     #defaultInfo {
-        position: unset!important;
-        min-width: 100%;
+        
     }
     
     #creationInfo {
-        position: unset!important;
-        min-width: 100%;
-        opacity: 0;
-        -webkit-transform: translateX(100%);
-                transform: translateX(100%);
-        -webkit-transition: all 1.5s;
-        transition: all 1.5s;
+        
     }
     
     #maintenanceInfo {
-        position: unset!important;
-        min-width: 100%;
-        opacity: 0;
-        -webkit-transform: translateX(100%);
-                transform: translateX(100%);
-        -webkit-transition: all 1.5s;
-        transition: all 1.5s;
+        
     }
     
     #managementInfo {
-        position: unset!important;
-        min-width: 100%;
-        opacity: 0;
-        -webkit-transform: translateX(100%);
-                transform: translateX(100%);
-        -webkit-transition: all 1.5s;
-        transition: all 1.5s;
+        
     }
 
     nav {

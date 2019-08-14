@@ -22,32 +22,34 @@ $(document).on("scroll", () => {
     }
 });
 
-$("#serviceMenu .slideUpFast > button").on("click", () => {
-    $("#defaultInfo").addClass("fadeOutRight");
-    $("#maintenanceInfo").removeClass("animate");
-    $("#managementInfo").removeClass("animate");
-    $("#creationInfo").addClass("animate");
-    $("#serviceMenu .slideUpFast > button").on("click", () => {
-        $("#defaultInfo").addClass("animate");
-        $("#defaultInfo").removeClass("fadeOutRight");
-        $("#defaultInfo").removeClass("animate");
-        $("#maintenanceInfo").removeClass("animate");
-        $("#managementInfo").removeClass("animate");
-        $("#creationInfo").removeClass("animate");
-    });
+function resetBtn() {
+    $(".welcomeInfo").removeClass("d-none d-block");
+    $(".updateInfo").removeClass("d-none d-block");
+    $(".appInfo").removeClass("d-none d-block");
+    $(".designInfo").removeClass("d-none d-block");
+}
+
+$("#designBtn").on("click", () => {
+    resetBtn();
+    $(".welcomeInfo").addClass("d-none");
+    $(".updateInfo").addClass("d-none");
+    $(".appInfo").addClass("d-none");
+    $(".designInfo").addClass("d-block");
 });
 
-$("#serviceMenu .slideUp > button").on("click", () => {
-    $("#defaultInfo").addClass("fadeOutRight");
-    $("#managementInfo").removeClass("animate");
-    $("#creationInfo").removeClass("animate");
-    $("#maintenanceInfo").addClass("animate");
+$("#updateBtn").on("click", () => {
+    resetBtn();
+    $(".welcomeInfo").addClass("d-none");
+    $(".appInfo").addClass("d-none");
+    $(".designInfo").addClass("d-none");
+    $(".updateInfo").addClass("d-block");
 });
 
-$("#serviceMenu .slideUpSlow > button").on("click", () => {
-    $("#defaultInfo").addClass("fadeOutRight");
-    $("#maintenanceInfo").removeClass("animate");
-    $("#creationInfo").removeClass("animate");
-    $("#managementInfo").addClass("animate");
+$("#appBtn").on("click", () => {
+    resetBtn();
+    $(".welcomeInfo").addClass("d-none");
+    $(".updateInfo").addClass("d-none");
+    $(".designInfo").addClass("d-none");
+    $(".appInfo").addClass("d-block");
 });
 

@@ -54,77 +54,37 @@
     }
 }
 
-@-webkit-keyframes slideUpFast {
+@-webkit-keyframes pulsate {
     0% {
-        -webkit-transform: translateY(200%);
-                transform: translateY(200%);
-        opacity: 0;
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
     }
+
+    50% {
+        -webkit-transform: translateY(5px) scale(1.05);
+                transform: translateY(5px) scale(1.05);
+    }
+
     100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-        opacity: 1;
+        -webkit-transform: translateY(0px) scale(1);
+                transform: translateY(0px) scale(1);
     }
 }
 
-@keyframes slideUpFast {
+@keyframes pulsate {
     0% {
-        -webkit-transform: translateY(200%);
-                transform: translateY(200%);
-        opacity: 0;
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
     }
+
+    50% {
+        -webkit-transform: translateY(10px) scale(1.05);
+                transform: translateY(10px) scale(1.05);
+    }
+
     100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-        opacity: 1;
-    }
-}
-@-webkit-keyframes slideUp {
-    0% {
-        -webkit-transform: translateY(300%);
-                transform: translateY(300%);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-        opacity: 1;
-    }
-}
-@keyframes slideUp {
-    0% {
-        -webkit-transform: translateY(300%);
-                transform: translateY(300%);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-        opacity: 1;
-    }
-}
-@-webkit-keyframes slideUpSlow {
-    0% {
-        -webkit-transform: translateY(400%);
-                transform: translateY(400%);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-        opacity: 1;
-    }
-}
-@keyframes slideUpSlow {
-    0% {
-        -webkit-transform: translateY(400%);
-                transform: translateY(400%);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-        opacity: 1;
+        -webkit-transform: translateY(0px) scale(1);
+                transform: translateY(0px) scale(1);
     }
 }
 
@@ -136,21 +96,6 @@
 .slideRight {
     -webkit-animation: 1s ease-out 0s 1 slideFromLeft;
             animation: 1s ease-out 0s 1 slideFromLeft;
-}
-
-.slideUpFast {
-    -webkit-animation: 1s ease-out 0s 1 slideUpFast;
-            animation: 1s ease-out 0s 1 slideUpFast;
-}
-
-.slideUp {
-    -webkit-animation: 1.25s ease-out 0s 1 slideUp;
-            animation: 1.25s ease-out 0s 1 slideUp;
-}
-
-.slideUpSlow {
-    -webkit-animation: 1.5s ease-out 0s 1 slideUpSlow;
-            animation: 1.5s ease-out 0s 1 slideUpSlow;
 }
 
 .fadeLeft {
@@ -169,18 +114,20 @@
     transition: all 1.5s;
 }
 
-.fadeOutRight {
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
 .animate {
     -webkit-transform: translateX(0)!important;
             transform: translateX(0)!important;
     opacity: 1!important;
+}
+
+.skewRight {
+    -webkit-transform: skew(0deg, 10deg);
+            transform: skew(0deg, 10deg);
+}
+
+.skewLeft {
+    -webkit-transform: skew(0deg, -10deg);
+            transform: skew(0deg, -10deg);
 }
 
 /* ########################## */
@@ -246,12 +193,11 @@ h3 {
 }
 
 p {
-    font-size: 18px;
+    font-size: 21px;
 }
 
 #wrapperOne {
     color: white;
-    height: 100%;
     background: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -290,61 +236,18 @@ p {
 #banner {
     text-align: center;
     text-transform: uppercase;
-    padding: 10rem 2rem 25rem;
+    padding: 10rem 2rem 7rem;
 }
 
 #serviceMenu {
-    padding-top: 6rem;
-    overflow: hidden;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
 }
 
 #serviceMenu .row {
     -webkit-box-pack: center!important;
         -ms-flex-pack: center!important;
             justify-content: center!important;
-}
-
-#serviceMenu button {
-    color: white;
-    padding: 1.5rem;
-    text-shadow: 1px 1px 2px #000000;
-    margin: 1rem;
-    border: none;
-}
-
-#defaultInfo {
-    position: absolute;
-    min-width: 100%;
-}
-
-#creationInfo {
-    position: absolute;
-    min-width: 100%;
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-#maintenanceInfo {
-    position: absolute;
-    min-width: 100%;
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
-}
-
-#managementInfo {
-    position: absolute;
-    min-width: 100%;
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
 }
 
 #portList .row {
@@ -389,7 +292,13 @@ p {
 
 .bg-box {
     background: rgba(0, 0, 0, 0.541);
+    border-radius: .15rem;
+}
 
+.bg-box-light {
+    color: black;
+    background: rgba(255, 255, 255, 0.685);
+    border-radius: .15rem;
 }
 
 .bg-shadow-r {
@@ -403,12 +312,27 @@ p {
 }
 
 .bg-shadow-l {
-    -webkit-box-shadow: -.5rem .5rem .5rem rgba(204, 204, 204, 0.568);
-            box-shadow: -.5rem .5rem .5rem rgba(204, 204, 204, 0.568);
+    -webkit-box-shadow: 0 .5rem .5rem rgba(204, 204, 204, 0.568);
+            box-shadow: 0 .5rem .5rem rgba(204, 204, 204, 0.568);
 }
 
-.text-shadow {
+.text-shadow-h {
     text-shadow: 1px 1px 2px #000000;
+}
+
+.text-shadow-l {
+    text-shadow: 1px 1px 2px #707070;
+}
+
+.buttonHover:hover {
+    background-color: rgba(135, 160, 175, 0.808);
+    transform: translateY(-3px) scale(1.02);
+    cursor: pointer;
+}
+
+.buttonHover:active {
+    background-color: rgba(71, 83, 88, 0.808);
+    transform: translateY(2px) scale(.98);
 }
 
 .nav-btn a {
@@ -416,18 +340,26 @@ p {
 }
 
 .headerStyling {
-    font-size: 3.25em;
+    font-size: 5rem;
     margin-bottom: 0;
 }
 
 .subHeaderStyling {
-    font-size: 4em;
-    margin-bottom: 1.5rem;
+    font-size: 6rem;
 }
 
 .sloganStyling {
-    font-size: 1em;
+    padding-top: 7rem;
+    font-size: 1.5rem;
     margin-bottom: 0;
+}
+
+.downArrow {
+    margin: 1rem 45% 1rem 45%;
+    height: 100px;
+    width: 100px;
+    -webkit-animation: 1s linear 0s infinite pulsate;
+            animation: 1s linear 0s infinite pulsate;
 }
 
 .row {
@@ -470,8 +402,17 @@ p {
             transform: translateY(-2px);
 }
 
-.aboutTitle {
+.aboutMission {
     padding: 5rem 1rem .5rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.aboutMe {
+    padding: 1rem 1rem .5rem 1rem;
     text-align: center;
     text-transform: uppercase;
     -webkit-box-pack: center;
@@ -481,37 +422,38 @@ p {
 
 .aboutContent {
     padding: .5rem 1rem 2rem 1rem;
-    text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
 }
 
-.fb-logo {
-    height: 50px;
-    width: 50px;
-}
-
 .infoTitle {
-    padding: 1rem 3rem;
+    padding: 1rem;
 }
 
 .infoContent {
-    padding: 2rem 4rem 2rem 4rem;
+    padding: 3rem 2rem 2rem 2rem;
+    margin: 0 4rem 0 4rem;
 }
 
 .infoClosing {
-    margin-bottom: 2rem;
-    padding: 2rem 4rem 3rem 4rem;
+    padding: 2rem 1rem 2rem 1rem;
 }
 
-.infoComingSoon {
-    padding: 7rem;
+.welcomeInfo {
+    display: block;
 }
 
-.comingSoon {
-    -webkit-transform: rotate(-0.1turn);
-            transform: rotate(-0.1turn);
+.designInfo {
+    display: none;
+}
+
+.updateInfo {
+    display: none;
+}
+
+.appInfo {
+    display: none;
 }
 
 .port-img {
@@ -598,7 +540,7 @@ p {
     }
 
     #banner {
-        padding: 10rem 2rem 20rem;
+        padding: 10rem 2rem 8rem;
     }
 
     #non-mobile {
@@ -644,6 +586,10 @@ p {
     
     .nav-btn a {
         font-size: 18px;
+    }
+
+    .downArrow {
+        margin: 1rem 9rem 1rem 9rem;
     }
 
     .headerStyling {

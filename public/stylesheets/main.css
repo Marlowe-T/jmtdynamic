@@ -509,31 +509,34 @@ p {
     #wrapperOne {
         color: white;
         height: 100%;
-        background-image: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg");
+        overflow: hidden;
+        /* background-image: url("/images/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg");
         background-size: cover;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; */
     }
     
-    #wrapperTwo {
+    /* #wrapperTwo {
         background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-    }
+    } */
     
-    #wrapperThree {
+    /* #wrapperThree {
         background-image: url("/images/luke-chesser-hQo6Uyo4nBg-unsplash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-    }
+    } */
     
-    #wrapperFour {
+    /* #wrapperFour {
         background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-    }
+    } */
 
     #navlogo {
-        display: none;
+        width: 95px;
+        height: 110px;
+        margin: auto;
     }
 
     #hamlogo {
@@ -543,7 +546,7 @@ p {
     }
 
     #banner {
-        padding: 10rem 2rem 8rem;
+        padding: 3rem 2rem 16rem;
     }
 
     #non-mobile {
@@ -553,23 +556,7 @@ p {
     #mobile {
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex;
-    }
-
-    #defaultInfo {
-        
-    }
-    
-    #creationInfo {
-        
-    }
-    
-    #maintenanceInfo {
-        
-    }
-    
-    #managementInfo {
-        
+        display: box;
     }
 
     nav {
@@ -592,11 +579,11 @@ p {
     }
 
     .downArrow {
-        margin: 1rem 9rem 1rem 9rem;
+        margin: auto;
     }
 
     .headerStyling {
-        font-size: 1.75em;
+        font-size: 2rem;
         margin-bottom: 0;
     }
     

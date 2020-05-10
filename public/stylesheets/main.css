@@ -142,7 +142,10 @@ html{
 body {
     height: 100vh;
     color: white;
-    background: black;
+    background: url("/images/spacex-6SbFGnQTE8s-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: center;
     font-family: 'Play', sans-serif;
 }
 
@@ -198,32 +201,32 @@ p {
 
 #wrapperOne {
     color: white;
-    background: url("/images/spacex-6SbFGnQTE8s-unsplash.jpg");
-    background-size: cover;
+    /* background: url("/images/spacex-6SbFGnQTE8s-unsplash.jpg");
+    background-size: cover; */
     background-repeat: no-repeat;
 }
 
 #wrapperTwo {
     color: white;
-    background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
+    /* background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     overflow: hidden;
 }
 
 #wrapperThree {
     color: white;
-    background-image: url("/images/luke-chesser-hQo6Uyo4nBg-unsplash.jpg");
+    /* background-image: url("/images/luke-chesser-hQo6Uyo4nBg-unsplash.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     overflow: hidden;
 }
 
 #wrapperFour {
     color: white;
-    background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
+    /* background-image: url("/images/luke-chesser-3POMgLjfYv0-unsplash.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     overflow: hidden;
 }
 
@@ -296,8 +299,8 @@ p {
 }
 
 .bg-box-light {
-    color: black;
-    background: rgba(255, 255, 255, 0.685);
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: .15rem;
 }
 
@@ -308,12 +311,12 @@ p {
 
 .bg-shadow-c {
     -webkit-box-shadow: 0 .5rem .5rem rgba(204, 204, 204, 0.568);
-            box-shadow: 0 .5rem .5rem rgba(204, 204, 204, 0.568);
+            box-shadow: -.5rem .5rem .5rem rgba(204, 204, 204, 0.568);
 }
 
 .bg-shadow-l {
     -webkit-box-shadow: 0 .5rem .5rem rgba(204, 204, 204, 0.568);
-            box-shadow: 0 .5rem .5rem rgba(204, 204, 204, 0.568);
+            box-shadow: -.5rem .5rem .5rem rgba(204, 204, 204, 0.568);
 }
 
 .text-shadow-h {
@@ -340,7 +343,7 @@ p {
 }
 
 .headerStyling {
-    font-size: 5rem;
+    font-size: 6rem;
     margin-bottom: 0;
 }
 

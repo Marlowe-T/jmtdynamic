@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop — JMT Dynamic</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>JMT Dynamic</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="about.html">About</a>
+        <a data-nav href="shop.html">Shop</a>
+        <a data-nav href="contact.html">Contact</a>
+        <span class="pill" title="Cart items">
+          Cart <span class="badge" data-cart-badge>0</span>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="content" class="section">
+    <div class="container">
+      <div class="kicker">SHOP</div>
+      <h1 style="margin:12px 0 6px;">Featured items</h1>
+      <p class="muted" style="margin:0 0 18px;">
+        This is a demo storefront for preview purposes (local cart only). For real checkout, connect to Shopify/WooCommerce/Squarespace Commerce.
+      </p>
+
+      <div class="grid two">
+        <div class="card pad">
+          <div class="pill">Products</div>
+          <div class="productGrid" data-product-grid></div>
+        </div>
+
+        <div class="card pad">
+          <div class="pill">Cart</div>
+          <h2 style="margin:12px 0 10px;">Your selection</h2>
+          <div data-cart></div>
+
+          <div class="hr"></div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+            <span class="muted">Estimated total</span>
+            <b data-cart-total>$0.00</b>
+          </div>
+
+          <div class="ctaRow" style="margin-top:14px;">
+            <a class="btn primary full" href="contact.html">Checkout / Inquiry</a>
+          </div>
+
+          <small class="faint">Tip: Replace demo products in <code>assets/js/shop.js</code>.</small>
+        </div>
+      </div>
+    </div>
+  
+    <section class="section tight">
+      <div class="container grid two">
+        <div class="card pad">
+          <div class="pill">Need something custom?</div>
+          <h2 style="margin:12px 0 6px;">Custom design & printing</h2>
+          <p class="muted" style="margin:0 0 14px;">
+            The shop items are great for quick purchases. If you need a one-off part, a revised design,
+            or a batch of components, send a message and we’ll quote it.
+          </p>
+          <div class="chips">
+            <span class="chip">CAD modeling</span>
+            <span class="chip">Fitment revisions</span>
+            <span class="chip">Small runs</span>
+            <span class="chip">Finishing</span>
+          </div>
+          <div class="ctaRow" style="margin-top:16px;">
+            <a class="btn primary" href="contact.html">Request a custom quote</a>
+            <a class="btn" href="about.html">How we work</a>
+          </div>
+        </div>
+
+        <div class="card pad faq">
+          <div class="pill">Policies</div>
+          <h2 style="margin:12px 0 6px;">Shipping & digital delivery</h2>
+
+          <details>
+            <summary>How are physical items shipped?</summary>
+            <p>We package parts to prevent scuffs and deformation. Shipping method is selected at checkout on the platform you use (demo here).</p>
+          </details>
+          <details>
+            <summary>How do STL files get delivered?</summary>
+            <p>Digital files are typically delivered via download link after purchase when using a real storefront (Shopify/WooCommerce). This demo does not process payments.</p>
+          </details>
+          <details>
+            <summary>Can you modify a file I purchased?</summary>
+            <p>Yes — send details and we can quote revisions for your specific fitment or use-case.</p>
+          </details>
+
+          <div class="hr"></div>
+          <div class="quoteCard">
+            <b>Pro tip</b>
+            <p>For fitment parts, include your exact year/model and any aftermarket changes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footerRow">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <div>
+          <b>JMT Dynamic</b><br/>
+          <small>3D Solutions</small>
+        </div>
+      </div>
+      <small>JMT Dynamic, LLC<br/>1575 Aviation Center Park<br/>Suite 432<br/>Daytona Beach, FL 32114</small>
+    </div>
+    <div class="container" style="margin-top:10px;">
+      <small class="faint">© <span id="year"></span> JMT Dynamic. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
